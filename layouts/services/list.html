@@ -1,60 +1,58 @@
 {{ define "main" }}
-<main class="flex-1">
-  <section class="py-12 sm:py-16 px-6 sm:px-10 bg-[var(--background-dark)]">
-    <div class="max-w-6xl mx-auto">
-      <h2
-        class="text-3xl sm:text-4xl font-bold tracking-tight text-center mb-4 text-[var(--text-primary)]"
+<section class="py-12 sm:py-16 px-6 sm:px-10 bg-[var(--background-dark)]">
+  <div class="max-w-6xl mx-auto">
+    <h2
+      class="text-3xl sm:text-4xl font-bold tracking-tight text-center mb-4 text-[var(--text-primary)]"
+    >
+      Our Services
+    </h2>
+    <div
+      class="flex justify-center gap-2 sm:gap-3 p-3 flex-wrap mb-8 sm:mb-12"
+    >
+      <button
+        class="filter-pill h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] hover:bg-gray-200 transition-colors px-4 sm:px-5 text-sm sm:text-base font-medium text-[var(--text-secondary)] pill-active"
+        data-filter="all"
       >
-        Our Services
-      </h2>
-      <div
-        class="flex justify-center gap-2 sm:gap-3 p-3 flex-wrap mb-8 sm:mb-12"
+        All
+      </button>
+      {{ range .Site.Taxonomies.categories.ByCount }}
+      <button
+        class="filter-pill h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] hover:bg-gray-200 transition-colors px-4 sm:px-5 text-sm sm:text-base font-medium text-[var(--text-secondary)]"
+        data-filter="{{ .Name | lower }}"
       >
-        <button
-          class="filter-pill h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] hover:bg-gray-200 transition-colors px-4 sm:px-5 text-sm sm:text-base font-medium text-[var(--text-secondary)] pill-active"
-          data-filter="all"
-        >
-          All
-        </button>
-        {{ range .Site.Taxonomies.categories.ByCount }}
-        <button
-          class="filter-pill h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] hover:bg-gray-200 transition-colors px-4 sm:px-5 text-sm sm:text-base font-medium text-[var(--text-secondary)]"
-          data-filter="{{ .Name | lower }}"
-        >
-          {{ .Name | title }}
-        </button>
-        {{ end }}
-      </div>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
-      >
-        {{ range .Pages }}
-        <div
-          class="service-card flex flex-col gap-4 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-[var(--background-light)]"
-          data-category="{{ range .Params.categories }}{{ . | lower }} {{ end }}"
-        >
-          <div
-            class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover"
-            style='background-image: url("{{ .Params.image }}");'
-          ></div>
-          <div class="p-5 flex flex-col flex-grow">
-            <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-1">
-              {{ .Title }}
-            </h3>
-            <p class="text-sm text-[var(--text-secondary)] mb-3">
-              {{ .Params.price }}
-            </p>
-            <a
-              href="{{ .Permalink }}"
-              class="mt-auto w-full text-center rounded-full h-10 px-4 bg-[var(--accent-color)] text-[var(--primary-color)] text-sm font-semibold hover:bg-red-200 transition-colors inline-flex items-center justify-center"
-            >
-              View Details
-            </a>
-          </div>
-        </div>
-        {{ end }}
-      </div>
+        {{ .Name | title }}
+      </button>
+      {{ end }}
     </div>
-  </section>
-</main>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+    >
+      {{ range .Pages }}
+      <div
+        class="service-card flex flex-col gap-4 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-[var(--background-light)]"
+        data-category="{{ range .Params.categories }}{{ . | lower }} {{ end }}"
+      >
+        <div
+          class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover"
+          style='background-image: url("{{ .Params.image }}");'
+        ></div>
+        <div class="p-5 flex flex-col flex-grow">
+          <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-1">
+            {{ .Title }}
+          </h3>
+          <p class="text-sm text-[var(--text-secondary)] mb-3">
+            {{ .Params.price }}
+          </p>
+          <a
+            href="{{ .Permalink }}"
+            class="mt-auto w-full text-center rounded-full h-10 px-4 bg-[var(--accent-color)] text-[var(--primary-color)] text-sm font-semibold hover:bg-red-200 transition-colors inline-flex items-center justify-center"
+          >
+            View Details
+          </a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
 {{ end }}
