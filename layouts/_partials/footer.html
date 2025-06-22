@@ -1,5 +1,22 @@
-<footer class="bottom-0 mx-auto w-screen max-w-4xl px-6 py-6">
-  <p class="text-center">
-    &copy; {{ now.Year }} Odhy Pradhana. All Rights Reserved.
-  </p>
+<footer class="bg-[var(--background-light)] py-10 border-t border-gray-200">
+  <div class="container mx-auto px-4 text-center">
+    <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 mb-6">
+      {{ range .Site.Menus.main }}
+      <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-base font-medium" href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <div class="flex justify-center gap-6 mb-6">
+      {{ range .Site.Menus.social }}
+      <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)]" href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
+        {{ if eq .Name "Instagram" }}
+        <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c-4.069 0-7.385 3.316-7.385 7.385 0 2.954 1.725 5.519 4.209 6.655.08.146.104.33.058.503-.045.173-.176.312-.344.385a.484.484 0 00-.24.03C5.85 16.607 3 13.413 3 9.385 3 4.203 7.203 0 12.315 0c5.112 0 9.315 4.203 9.315 9.385 0 4.028-2.85 7.222-6.016 7.607a.482.482 0 00-.24-.03c-.168-.073-.3-.212-.344-.385-.046-.173-.022-.357.058-.503 2.484-1.136 4.209-3.701 4.209-6.655C19.7 5.316 16.384 2 12.315 2zM6.38 19.252c-1.183 0-2.14.958-2.14 2.14s.957 2.14 2.14 2.14 2.14-.958 2.14-2.14-.957-2.14-2.14-2.14zm11.24 0c-1.183 0-2.14.958-2.14 2.14s.957 2.14 2.14 2.14 2.14-.958 2.14-2.14-.957-2.14-2.14-2.14zM12 8.03C9.794 8.03 8.03 9.794 8.03 12s1.764 3.97 3.97 3.97 3.97-1.764 3.97-3.97S14.206 8.03 12 8.03z" fill-rule="evenodd"></path></svg>
+        {{ else if eq .Name "Facebook" }}
+        <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+        {{ end }}
+        <span class="sr-only">{{ .Name }}</span>
+      </a>
+      {{ end }}
+    </div>
+    <p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">© {{ now.Year }} {{ .Site.Title }}</p>
+  </div>
 </footer>
