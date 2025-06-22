@@ -14,6 +14,9 @@
     <meta name="author" content="{{ .Params.Author}}" />
     {{ end -}}
 
+    {{/* Google Fonts for Material Icons */}}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+
     {{ hugo.Generator }}
     {{ partialCached "css.html" . }}
     {{ partialCached "js.html" . }}

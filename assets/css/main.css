@@ -2,12 +2,14 @@
 @source "hugo_stats.json";
 
 @theme {
-  --color-avocado-100: oklch(0.99 0 0);
-  --color-avocado-200: oklch(0.98 0.04 113.22);
-  --color-avocado-300: oklch(0.94 0.11 115.03);
-  --color-avocado-400: oklch(0.92 0.19 114.08);
-  --color-avocado-500: oklch(0.84 0.18 117.33);
-  --color-avocado-600: oklch(0.53 0.12 118.34);
+  --primary-color: #e92932;
+  --secondary-color: #181111;
+  --accent-color: #fff0f0;
+  --text-primary: #181111;
+  --text-secondary: #5b5b5b;
+  --text-on-primary: #ffffff;
+  --background-light: #ffffff;
+  --background-dark: #f8f8f8;
 }
 
 .sample {
