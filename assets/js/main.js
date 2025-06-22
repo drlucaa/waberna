@@ -40,4 +40,55 @@ document.addEventListener("DOMContentLoaded", () => {
       applyTheme(!isCurrentlyDark);
     });
   }
+
+  // Function to get URL parameters
+  const getUrlParameter = (name) => {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    const regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+    const results = regex.exec(location.search);
+    return results === null
+      ? ""
+      : decodeURIComponent(results[1].replace(/\+/g, " "));
+  };
+
+  // Services filter
+  const filterPills = document.querySelectorAll(".filter-pill");
+  const serviceCards = document.querySelectorAll(".service-card");
+
+  if (filterPills.length > 0 && serviceCards.length > 0) {
+    filterPills.forEach((pill) => {
+      pill.addEventListener("click", () => {
+        if (pill.classList.contains("pill-active")) {
+          return;
+        }
+
+        filterPills.forEach((p) => p.classList.remove("pill-active"));
+        pill.classList.add("pill-active");
+
+        const filter = pill.getAttribute("data-filter");
+
+        serviceCards.forEach((card) => {
+          if (
+            filter === "all" ||
+            card.getAttribute("data-category").includes(filter)
+          ) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+
+    // Check for category in URL and pre-filter
+    const categoryParam = getUrlParameter("category");
+    if (categoryParam) {
+      const filterPill = document.querySelector(
+        `.filter-pill[data-filter="${categoryParam}"]`,
+      );
+      if (filterPill) {
+        filterPill.click();
+      }
+    }
+  }
 });
