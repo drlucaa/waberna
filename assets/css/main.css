@@ -12,6 +12,18 @@
   --background-dark: #f8f8f8;
 }
 
+/* Dark Mode Color Palette */
+html.dark {
+  --primary-color: #e92932;
+  --secondary-color: #333333;
+  --accent-color: #4d2224;
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0a0;
+  --background-light: #1a1a1a;
+  --background-dark: #111111;
+  --text-on-primary: #ffffff;
+}
+
 .sample {
   @apply text-red-400 italic;
 }

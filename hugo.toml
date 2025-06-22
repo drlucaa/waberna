@@ -7,6 +7,7 @@ ignoreLogs = ["warning-goldmark-raw-html"]
 [params]
 description = "Kreativer und unabhängiger Coiffeursalon im Herzen von Wabern."
 booking_url = "https://www.treatwell.ch/ort/wabern-bei-bern/"
+booking_label = "Jetzt Buchen"
 phone = "+41 31 123 45 67"
 address = "Musterstrasse 1, 3084 Wabern, Switzerland"
 
