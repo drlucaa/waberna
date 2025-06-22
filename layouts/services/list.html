@@ -30,7 +30,7 @@
       >
         {{ range .Pages }}
         <div
-          class="service-card flex-col gap-4 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-[var(--background-light)]"
+          class="service-card flex flex-col gap-4 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-[var(--background-light)]"
           data-category="{{ range .Params.categories }}{{ . | lower }} {{ end }}"
         >
           <div
@@ -44,11 +44,12 @@
             <p class="text-sm text-[var(--text-secondary)] mb-3">
               {{ .Params.price }}
             </p>
-            <button
-              class="mt-auto w-full text-center rounded-full h-10 px-4 bg-[var(--accent-color)] text-[var(--primary-color)] text-sm font-semibold hover:bg-red-200 transition-colors"
+            <a
+              href="{{ .Permalink }}"
+              class="mt-auto w-full text-center rounded-full h-10 px-4 bg-[var(--accent-color)] text-[var(--primary-color)] text-sm font-semibold hover:bg-red-200 transition-colors inline-flex items-center justify-center"
             >
               View Details
-            </button>
+            </a>
           </div>
         </div>
         {{ end }}
