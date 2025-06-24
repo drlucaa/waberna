@@ -5,8 +5,8 @@
 
 @theme {
   --primary-color: #e92932;
-  --secondary-color: #181111;
-  --accent-color: #fff0f0;
+  --secondary-color: #380707;
+  --accent-color: #f7cbcb;
   --text-primary: #181111;
   --text-secondary: #5b5b5b;
   --text-on-primary: #ffffff;
@@ -17,13 +17,13 @@
 /* Dark Mode Color Palette */
 html.dark {
   --primary-color: #e92932;
-  --secondary-color: #333333;
+  --secondary-color: #380707;
   --accent-color: #4d2224;
   --text-primary: #f0f0f0;
   --text-secondary: #a0a0a0;
+  --text-on-primary: #ffffff;
   --background-light: #1a1a1a;
   --background-dark: #111111;
-  --text-on-primary: #ffffff;
 }
 
 .pill-active {
