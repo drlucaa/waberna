@@ -3,7 +3,7 @@ title = "Elegante Hochsteckfrisuren für besondere Anlässe"
 date = 2025-12-05T16:00:00+01:00
 draft = false
 description = "Finden Sie die perfekte Hochsteckfrisur für Ihre nächste Gala, Hochzeit oder Party."
-image = "https://images.unsplash.com/photo-1605389400293-2a8d42398bee"
+image = "https://plus.unsplash.com/premium_photo-1690205353928-4dc62e1d80bd"
 categories = ["Styling", "Trends", "Hochzeiten"]
 +++
 

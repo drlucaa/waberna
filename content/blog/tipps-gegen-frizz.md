@@ -3,7 +3,7 @@ title = "Tipps zur Bekämpfung von Frizz im Winter"
 date = 2026-01-10T10:00:00+01:00
 draft = false
 description = "Sagen Sie krausem Haar den Kampf an mit diesen effektiven Tipps für die kalte Jahreszeit."
-image = "https://images.unsplash.com/photo-1571441093111-8ac14979e2de"
+image = "https://plus.unsplash.com/premium_photo-1690205353928-4dc62e1d80bd"
 categories = ["Haarpflege", "Tipps"]
 +++
 
