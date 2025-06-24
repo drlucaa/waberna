@@ -1,6 +1,6 @@
 +++
 title = "Vibrant Color"
-date = 2025-06-22T21:01:00+02:00
+date = 2025-05-22T21:01:00+02:00
 draft = false
 description = "Express yourself with color"
 price = "$80 - $200"

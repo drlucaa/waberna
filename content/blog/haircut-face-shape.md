@@ -1,6 +1,6 @@
 +++
 title = "Der richtige Haarschnitt für Ihre Gesichtsform"
-date = 2025-08-01T10:00:00+02:00
+date = 2025-06-01T10:00:00+02:00
 draft = false
 description = "Ein Leitfaden, um den schmeichelhaftesten Haarschnitt für verschiedene Gesichtsformen zu finden."
 image = "https://plus.unsplash.com/premium_photo-1742909963787-1f74fc54628a"

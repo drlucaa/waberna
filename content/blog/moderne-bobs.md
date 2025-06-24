@@ -1,6 +1,6 @@
 +++
 title = "Die Rückkehr des Bobs: Moderne Varianten eines Klassikers"
-date = 2026-02-01T11:00:00+01:00
+date = 2025-02-01T11:00:00+01:00
 draft = false
 description = "Der Bob ist zurück und vielseitiger als je zuvor. Entdecken Sie die trendigsten Bob-Frisuren der Saison."
 image = "https://images.unsplash.com/photo-1599695556750-6bce0fa9b3f5"

@@ -1,6 +1,6 @@
 +++
 title = "So wählen Sie das richtige Shampoo und den richtigen Conditioner"
-date = 2026-02-20T09:00:00+01:00
+date = 2025-02-20T09:00:00+01:00
 draft = false
 description = "Ein Leitfaden zur Auswahl der perfekten Haarpflegeprodukte für Ihre spezifischen Haarbedürfnürfnisse."
 image = "https://images.unsplash.com/flagged/photo-1580820258381-20c91a156841"

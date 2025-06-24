@@ -1,6 +1,6 @@
 +++
 title = "5 Tipps für gesundes Sommerhaar"
-date = 2025-07-15T10:00:00+02:00
+date = 2025-06-15T10:00:00+02:00
 draft = false
 description = "Schützen Sie Ihr Haar vor Sonne, Chlor und Salzwasser mit diesen einfachen Tipps."
 image = "https://images.unsplash.com/photo-1560969184-10fe8719e047"

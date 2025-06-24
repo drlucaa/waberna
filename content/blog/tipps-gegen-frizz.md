@@ -1,6 +1,6 @@
 +++
 title = "Tipps zur Bekämpfung von Frizz im Winter"
-date = 2026-01-10T10:00:00+01:00
+date = 2025-01-10T10:00:00+01:00
 draft = false
 description = "Sagen Sie krausem Haar den Kampf an mit diesen effektiven Tipps für die kalte Jahreszeit."
 image = "https://plus.unsplash.com/premium_photo-1690205353928-4dc62e1d80bd"
