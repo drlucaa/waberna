@@ -13,6 +13,7 @@ address = "Musterstrasse 1, 3084 Wabern, Switzerland"
 
 [taxonomies]
 category = "categories"
+service_category = "service_categories"
 
 [[menu.main]]
 name = "Home"

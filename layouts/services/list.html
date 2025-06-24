@@ -11,7 +11,7 @@
       <button class="filter-pill h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] hover:bg-[var(--accent-color)] transition-colors px-4 sm:px-5 text-sm sm:text-base font-medium text-[var(--text-secondary)] pill-active" data-filter="all">
         All
       </button>
-      {{ range .Site.Taxonomies.categories.ByCount }}
+      {{ range .Site.Taxonomies.service_categories.ByCount }}
       <button class="filter-pill h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] hover:bg-[var(--accent-color)] transition-colors px-4 sm:px-5 text-sm sm:text-base font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)]" data-filter="{{ .Name | lower }}">
         {{ .Name | title }}
       </button>
@@ -19,7 +19,7 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
       {{ range .Pages }}
-      <div class="service-card flex flex-col gap-4 rounded-xl overflow-hidden shadow-sm dark:shadow-none transition-shadow duration-300 bg-[var(--background-light)]" data-category="{{ range .Params.categories }}{{ . | lower }} {{ end }}">
+      <div class="service-card flex flex-col gap-4 rounded-xl overflow-hidden shadow-sm dark:shadow-none transition-shadow duration-300 bg-[var(--background-light)]" data-category="{{ range .Params.service_categories }}{{ . | lower }} {{ end }}">
         <div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" style='background-image: url("{{ .Params.image }}");'></div>
         <div class="p-5 flex flex-col flex-grow">
           <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-1">
