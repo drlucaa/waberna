@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/odhyp/hugo-tailwindcss-starter#readme",
   "scripts": {
-    "dev": "hugo server --buildDrafts",
+    "dev": "hugo server --buildDrafts --buildFuture",
     "build": "hugo --gc --minify",
     "watch": "hugo server --disableFastRender --navigateToChanged"
   },
