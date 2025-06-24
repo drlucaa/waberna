@@ -7,10 +7,10 @@
     {{ end }}
   </nav>
   <div class="flex items-center gap-4">
-    <button id="theme-toggle" type="button" class="w-10 h-10 flex items-center justify-center text-[var(--text-secondary)] hover:bg-[var(--accent-color)] focus:outline-none rounded-lg">
+    <button id="theme-toggle" type="button" class="w-10 h-10 flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--primary-color)] hover:bg-[var(--accent-color)] focus:outline-none rounded-lg">
       <span id="theme-icon" class="material-icons-outlined"></span>
     </button>
-    <a class="hidden md:flex min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--text-on-primary)] text-sm font-semibold leading-normal tracking-wide hover:bg-opacity-90 transition-colors" href="{{ .Site.Params.booking_url }}" target="_blank">
+    <a class="hidden md:flex min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--text-on-primary)] text-sm font-semibold leading-normal tracking-wide hover:scale-105 transition-transform duration-300" href="{{ .Site.Params.booking_url }}" target="_blank">
       {{ .Site.Params.booking_label }}
     </a>
     <button id="menu-toggle" class="flex items-center justify-center md:hidden text-[var(--text-secondary)]">
