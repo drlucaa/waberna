@@ -5,9 +5,9 @@ draft = false
 description = "Tailored to Your Personality"
 price = "$60 - $120"
 time_estimate = "60-90 minutes"
-image = "https://placehold.co/600x400/4d2224/ffffff?text=Precision+Cut"
-before_image = "https://placehold.co/600x400/4d2224/ffffff?text=Before"
-after_image = "https://placehold.co/600x400/4d2224/ffffff?text=After"
+image = "https://plus.unsplash.com/premium_photo-1677098574517-99d59b97bdd6?"
+before_image = "https://images.unsplash.com/photo-1456327102063-fb5054efe647"
+after_image = "https://images.unsplash.com/photo-1488282396544-0212eea56a21"
 categories = ["Haircuts"]
 +++
 

@@ -5,9 +5,9 @@ draft = false
 description = "Add length and volume"
 price = "$150 - $400"
 time_estimate = "120-240 minutes"
-image = "https://placehold.co/600x400/4d2224/ffffff?text=Extensions"
-before_image = "https://placehold.co/600x400/4d2224/ffffff?text=Before"
-after_image = "https://placehold.co/600x400/4d2224/ffffff?text=After"
+image = "https://images.unsplash.com/photo-1634449571017-5fecfd26ad76"
+before_image = "https://images.unsplash.com/photo-1456327102063-fb5054efe647"
+after_image = "https://images.unsplash.com/photo-1488282396544-0212eea56a21"
 categories = ["Extensions"]
 +++
 

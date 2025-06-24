@@ -5,9 +5,9 @@ draft = false
 description = "Perfect for any occasion"
 price = "$50 - $150"
 time_estimate = "45-75 minutes"
-image = "https://placehold.co/600x400/4d2224/ffffff?text=Signature+Styling"
-before_image = "https://placehold.co/600x400/4d2224/ffffff?text=Before"
-after_image = "https://placehold.co/600x400/4d2224/ffffff?text=After"
+image = "https://images.unsplash.com/photo-1701977501667-20c0e38f5a9d"
+before_image = "https://images.unsplash.com/photo-1456327102063-fb5054efe647"
+after_image = "https://images.unsplash.com/photo-1488282396544-0212eea56a21"
 categories = ["Styling"]
 +++
 
