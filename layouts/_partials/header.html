@@ -1,18 +1,22 @@
-<header class="relative px-4 lg:px-10 py-4 flex items-center justify-between sticky top-0 z-50 bg-[var(--background-light)] shadow-sm">
+<header
+  class="relative px-4 lg:px-10 py-4 flex items-center justify-between sticky top-0 z-50 bg-[var(--background-light)] shadow-sm">
   <a class="text-2xl font-bold text-[var(--primary-color)]" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
   <nav class="hidden md:flex items-center gap-6">
     {{ range .Site.Menus.main }}
-    <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] font-medium" href="{{ .URL }}">{{ .Name }}</a>
+    <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] font-medium" href="{{ .URL }}">{{ .Name
+      }}</a>
     {{ end }}
   </nav>
   <div class="flex items-center gap-4">
-    <button id="theme-toggle" type="button" class="w-10 h-10 flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--text-on-primary)] hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg">
+    <button id="theme-toggle" type="button"
+      class="w-10 h-10 flex items-center justify-center text-[var(--text-secondary)] hover:bg-[var(--accent-color)] focus:outline-none rounded-lg">
       <span id="theme-icon" class="material-icons-outlined"></span>
     </button>
-    <a class="hidden md:flex min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--text-on-primary)] text-sm font-semibold leading-normal tracking-wide hover:bg-opacity-90 transition-colors" href="{{ .Site.Params.booking_url }}" target="_blank">
+    <a class="hidden md:flex min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--text-on-primary)] text-sm font-semibold leading-normal tracking-wide hover:bg-opacity-90 transition-colors"
+      href="{{ .Site.Params.booking_url }}" target="_blank">
       {{ .Site.Params.booking_label }}
     </a>
-    <button id="menu-toggle" class="md:hidden text-[var(--secondary-color)]">
+    <button id="menu-toggle" class="flex items-center justify-center md:hidden text-[var(--text-secondary)]">
       <span class="material-icons-outlined">menu</span>
     </button>
   </div>
@@ -21,8 +25,10 @@
       {{ range .Site.Menus.main }}
       <a href="{{ .URL }}" class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] py-2">{{ .Name }}</a>
       {{ end }}
-      <a href="{{ .Site.Params.booking_url }}" class="mt-2 text-center rounded-full px-5 py-2 bg-[var(--primary-color)] text-[var(--text-on-primary)] text-sm font-semibold hover:bg-opacity-90 transition-colors" target="_blank">
-        Book Appointment
+      <a href="{{ .Site.Params.booking_url }}"
+        class="mt-2 text-center rounded-full px-5 py-2 bg-[var(--primary-color)] text-[var(--text-on-primary)] text-sm font-semibold hover:bg-opacity-90 transition-colors"
+        target="_blank">
+        {{ .Site.Params.booking_label }}
       </a>
     </nav>
   </div>
