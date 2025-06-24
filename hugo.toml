@@ -36,7 +36,7 @@ weight = 40
 
 [[menu.main]]
 name = "Blog"
-url = "/blog"
+pageRef = "/blog"
 weight = 50
 
 [[menu.social]]
