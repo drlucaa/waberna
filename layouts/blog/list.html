@@ -7,61 +7,21 @@
 </section>
 
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-  <div class="flex flex-col lg:flex-row gap-12">
-    <div class="lg:w-3/4">
-      <h2 class="text-3xl font-bold tracking-tight text-[var(--text-primary)] mb-8">Neuste Beiträge</h2>
-      <div class="space-y-12">
-        {{ range .Paginator.Pages }}
-        <article class="group grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-          <div class="md:col-span-1">
-            <a class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" href="{{ .Permalink }}">
-              {{ if .Params.image }}
-              <img alt="{{ .Title }}" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="{{ .Params.image }}"/>
-              {{ else }}
-              <img alt="{{ .Title }}" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="https://placehold.co/600x400/f5d5d5/181111?text=Waberna"/>
-              {{ end }}
-            </a>
-          </div>
-          <div class="md:col-span-2 space-y-3">
-            <p class="text-sm text-[var(--text-secondary)]">{{ .Date.Format "January 2, 2006" }}</p>
-            <h3 class="text-2xl font-semibold text-[var(--text-primary)] group-hover:text-[var(--primary-color)] transition-colors">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h3>
-            <div class="text-[var(--text-secondary)] leading-relaxed">
-              {{ .Summary }}
-            </div>
-            <a class="inline-flex items-center text-[var(--primary-color)] font-medium hover:underline" href="{{ .Permalink }}">
-              Weiterlesen
-              <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-        {{ end }}
-      </div>
-      {{ partial "pagination.html" . }}
+    <div class="flex justify-center gap-2 sm:gap-3 p-3 flex-wrap mb-8 sm:mb-12">
+      <a href="{{ (.Site.GetPage "blog").RelPermalink }}" class="blog-filter-pill h-10 shrink-0 inline-flex items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] hover:bg-[var(--accent-color)] transition-colors px-4 sm:px-5 text-sm sm:text-base font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] pill-active">
+        All
+      </a>
+      {{ range .Site.Taxonomies.categories.ByCount }}
+      <a href="{{ .Page.Permalink }}" class="blog-filter-pill h-10 shrink-0 inline-flex items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] hover:bg-[var(--accent-color)] transition-colors px-4 sm:px-5 text-sm sm:text-base font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)]">
+        {{ .Name | title }} ({{ .Count }})
+      </a>
+      {{ end }}
     </div>
-    <aside class="lg:w-1/4 space-y-8">
-      <div>
-        <h3 class="text-2xl font-bold text-[var(--text-primary)] mb-4">Kategorien</h3>
-        <ul class="space-y-2">
-          {{ $categories := .Site.Taxonomies.categories }}
-          {{ range $name, $taxonomy := $categories }}
-            {{ if gt $taxonomy.Count 0 }}
-            <li>
-                <a class="block px-4 py-2 rounded-md bg-[var(--background-light)] hover:bg-[var(--accent-color)] text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors" href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a>
-            </li>
-            {{ end }}
-          {{ end }}
-        </ul>
-      </div>
-      <div class="sticky top-20">
-        <a href="{{ .Permalink }}" class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 bg-[var(--accent-color)] text-[var(--text-primary)] text-base font-bold tracking-wide hover:bg-[var(--primary-color)] hover:text-[var(--text-on-primary)] transition-colors">
-          <span class="truncate">Alle Beiträge ansehen</span>
-        </a>
-      </div>
-    </aside>
-  </div>
+    <div class="space-y-12">
+      {{ range .Paginator.Pages }}
+        {{ partial "blog-card.html" . }}
+      {{ end }}
+    </div>
+    {{ partial "pagination.html" . }}
 </section>
 {{ end }}

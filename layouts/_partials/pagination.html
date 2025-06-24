@@ -3,7 +3,7 @@
 <div class="flex justify-center mt-12">
   <nav class="flex items-center gap-4 text-sm font-medium">
     {{ if $paginator.HasPrev }}
-    <a href="{{ $paginator.Prev.URL }}" class="px-4 py-2 rounded-md bg-[var(--accent-color)] hover:bg-[var(--primary-color)] hover:text-[var(--text-on-primary)] transition-colors">
+    <a href="{{ $paginator.Prev.URL }}" class="px-4 py-2 rounded-md text-[var(--text-on-primary)] bg-[var(--accent-color)] hover:bg-[var(--primary-color)]  transition-colors">
        &larr; Neuer
     </a>
     {{ end }}
@@ -11,7 +11,7 @@
       Seite {{ $paginator.PageNumber }} von {{ $paginator.TotalPages }}
     </span>
     {{ if $paginator.HasNext }}
-    <a href="{{ $paginator.Next.URL }}" class="px-4 py-2 rounded-md bg-[var(--accent-color)] hover:bg-[var(--primary-color)] hover:text-[var(--text-on-primary)] transition-colors">
+    <a href="{{ $paginator.Next.URL }}" class="px-4 py-2 rounded-md text-[var(--text-on-primary)] bg-[var(--accent-color)] hover:bg-[var(--primary-color)]  transition-colors">
       Älter &rarr;
     </a>
     {{ end }}
