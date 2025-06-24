@@ -1,6 +1,6 @@
 +++
 title = "Die heissesten Hochzeitsfrisuren für 2025"
-date = 2025-09-10T10:00:00+02:00
+date = 2024-09-10T10:00:00+02:00
 draft = false
 description = "Lassen Sie sich von den neuesten Trends für Brautfrisuren für Ihren besonderen Tag inspirieren."
 image = "https://images.unsplash.com/photo-1659433307947-13c1c7b6b5fc"
