@@ -1,3 +1,4 @@
+// assets/js/main.js
 document.addEventListener("DOMContentLoaded", () => {
   // Mobile menu toggle
   const menuToggle = document.getElementById("menu-toggle");
@@ -26,9 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Determine and apply the initial theme on page load
   const savedTheme = localStorage.getItem("color-theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const isDarkInitially =
-    savedTheme === "dark" || (savedTheme === null && prefersDark);
+  const isDarkInitially = savedTheme === "dark";
   applyTheme(isDarkInitially);
 
   // Add event listener to the button
