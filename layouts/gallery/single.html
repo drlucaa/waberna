@@ -1,0 +1,68 @@
+{{ define "main" }}
+<section
+  class="relative bg-cover bg-center py-24 md:py-32"
+  style="
+    background-image:
+      linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%),
+      url(&quot;https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f&quot;);
+  "
+>
+  <div class="container mx-auto px-6 text-center">
+    <h1
+      class="text-4xl leading-tight font-bold tracking-tight text-white md:text-6xl"
+    >
+      {{ .Title }}
+    </h1>
+    <p class="mx-auto mt-4 max-w-2xl text-lg text-neutral-200 md:text-xl">
+      {{ .Description }}
+    </p>
+  </div>
+</section>
+
+<section class="p-16">
+  <div class="columns-1 gap-7 md:columns-2 xl:columns-3">
+    <div class="mb-8 break-inside-avoid">
+      <img
+        class="h-auto max-w-full rounded-lg"
+        src="https://pagedone.io/asset/uploads/1688031162.jpg"
+        alt="Gallery image"
+      />
+    </div>
+    <div class="mb-8 break-inside-avoid">
+      <img
+        class="h-auto max-w-full rounded-lg"
+        src="https://pagedone.io/asset/uploads/1688031232.jpg"
+        alt="Gallery image"
+      />
+    </div>
+    <div class="mb-8 break-inside-avoid">
+      <img
+        class="h-auto max-w-full rounded-lg"
+        src="https://pagedone.io/asset/uploads/1688031357.jpg"
+        alt="Gallery image"
+      />
+    </div>
+    <div class="mb-8 break-inside-avoid">
+      <img
+        class="h-auto max-w-full rounded-lg"
+        src="https://pagedone.io/asset/uploads/1688031375.jpg"
+        alt="Gallery image"
+      />
+    </div>
+    <div class="mb-8 break-inside-avoid">
+      <img
+        class="h-auto max-w-full rounded-lg"
+        src="https://pagedone.io/asset/uploads/1688031396.jpg"
+        alt="Gallery image"
+      />
+    </div>
+    <div class="mb-8 break-inside-avoid">
+      <img
+        class="h-auto max-w-full rounded-lg"
+        src="https://pagedone.io/asset/uploads/1688031414.png"
+        alt="Gallery image"
+      />
+    </div>
+  </div>
+</section>
+{{ end }}

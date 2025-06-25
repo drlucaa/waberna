@@ -1,3 +1,4 @@
 [[language]]
 name = "html"
 language-servers = ["vscode-html-language-server"]
+formatter = { command = "prettier", args = ["--parser", "html"] }

@@ -1,139 +1,247 @@
 {{ define "main" }}
-<section class="relative bg-cover bg-center py-24 md:py-32"
-  style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%), url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f");'>
+<section
+  class="relative bg-cover bg-center py-24 md:py-32"
+  style="
+    background-image:
+      linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%),
+      url(&quot;https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f&quot;);
+  "
+>
   <div class="container mx-auto px-6 text-center">
-    <h1 class="text-white text-4xl md:text-6xl font-bold tracking-tight leading-tight">{{ .Title }}</h1>
-    <p class="text-neutral-200 mt-4 text-lg md:text-xl max-w-2xl mx-auto">{{ .Description }}</p>
+    <h1
+      class="text-4xl leading-tight font-bold tracking-tight text-white md:text-6xl"
+    >
+      {{ .Title }}
+    </h1>
+    <p class="mx-auto mt-4 max-w-2xl text-lg text-neutral-200 md:text-xl">
+      {{ .Description }}
+    </p>
   </div>
 </section>
 
-<section class="py-16 md:py-24 bg-[var(--background-light)]">
+<section class="bg-[var(--background-light)] py-16 md:py-24">
   <div class="container mx-auto px-6">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="grid items-center gap-12 md:grid-cols-2">
       <div class="space-y-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)]">Gegründet von Amelia Harper & Olivia
-          Bennett im Jahr 2018</h2>
+        <h2 class="text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
+          Gegründet von Amelia Harper & Olivia Bennett im Jahr 2018
+        </h2>
         <div
-          class="prose dark:prose-invert max-w-none text-[var(--text-secondary)] text-base md:text-lg font-normal leading-relaxed">
+          class="prose dark:prose-invert max-w-none text-base leading-relaxed font-normal text-[var(--text-secondary)] md:text-lg"
+        >
           {{ .Content }}
         </div>
       </div>
-      <div class="aspect-[4/3] bg-center bg-no-repeat bg-cover rounded-xl shadow-xl dark:shadow-none hover:scale-105 transition-transform duration-300"
-        style='background-image: url("https://images.unsplash.com/photo-1525222285365-d6bfe94ec598");'>
+      <div
+        class="aspect-[4/3] rounded-xl bg-cover bg-center bg-no-repeat shadow-xl transition-transform duration-300 hover:scale-105 dark:shadow-none"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1525222285365-d6bfe94ec598&quot;);
+        "
+      ></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-[var(--background-dark)] py-16 md:py-24">
+  <div class="container mx-auto px-6">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
+        Unsere Mission
+      </h2>
+    </div>
+    <div class="grid gap-8 text-center md:grid-cols-3">
+      <div
+        class="rounded-xl bg-[var(--background-light)] p-8 shadow-md transition-shadow dark:shadow-none"
+      >
+        <div
+          class="mb-4 inline-grid place-items-center rounded-full bg-[var(--accent-color)] p-4"
+        >
+          <span
+            class="material-icons-outlined text-3xl text-[var(--primary-color)]"
+            >spa</span
+          >
+        </div>
+        <h3 class="mb-2 text-xl font-semibold text-[var(--text-primary)]">
+          Personalisierte Betreuung
+        </h3>
+        <p class="text-sm leading-relaxed text-[var(--text-secondary)]">
+          Ihre Schönheitserfahrung durch persönliche Betreuung und Liebe zum
+          Detail zu verbessern.
+        </p>
+      </div>
+      <div
+        class="rounded-xl bg-[var(--background-light)] p-8 shadow-md transition-shadow dark:shadow-none"
+      >
+        <div
+          class="mb-4 inline-grid place-items-center rounded-full bg-[var(--accent-color)] p-4"
+        >
+          <span
+            class="material-icons-outlined text-3xl text-[var(--primary-color)]"
+            >auto_awesome</span
+          >
+        </div>
+        <h3 class="mb-2 text-xl font-semibold text-[var(--text-primary)]">
+          Transformation
+        </h3>
+        <p class="text-sm leading-relaxed text-[var(--text-secondary)]">
+          Wir glauben an die Kraft der Transformation, nicht nur im Aussehen,
+          sondern auch im Selbstvertrauen und Wohlbefinden.
+        </p>
+      </div>
+      <div
+        class="rounded-xl bg-[var(--background-light)] p-8 shadow-md transition-shadow dark:shadow-none"
+      >
+        <div
+          class="mb-4 inline-grid place-items-center rounded-full bg-[var(--accent-color)] p-4"
+        >
+          <span
+            class="material-icons-outlined text-3xl text-[var(--primary-color)]"
+            >eco</span
+          >
+        </div>
+        <h3 class="mb-2 text-xl font-semibold text-[var(--text-primary)]">
+          Nachhaltigkeit
+        </h3>
+        <p class="text-sm leading-relaxed text-[var(--text-secondary)]">
+          Unser Engagement geht über den Stuhl hinaus und umfasst umweltbewusste
+          Entscheidungen für unsere Kunden und den Planeten.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-16 md:py-24 bg-[var(--background-dark)]">
+<section class="bg-[var(--background-light)] py-16 md:py-24">
   <div class="container mx-auto px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)]">Unsere Mission</h2>
+    <div class="mb-12 text-center md:mb-16">
+      <h2 class="text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
+        Lernen Sie unser Team kennen
+      </h2>
+      <p class="mx-auto mt-3 max-w-xl text-lg text-[var(--text-secondary)]">
+        Talentierte Stylisten, die sich dafür einsetzen, dass Sie gut aussehen
+        und sich gut fühlen.
+      </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-8 text-center">
-      <div class="bg-[var(--background-light)] p-8 rounded-xl shadow-md dark:shadow-none transition-shadow">
-        <div class="p-4 bg-[var(--accent-color)] rounded-full mb-4 inline-grid place-items-center">
-          <span class="material-icons-outlined text-3xl text-[var(--primary-color)]">spa</span>
-        </div>
-        <h3 class="text-xl font-semibold text-[var(--text-primary)] mb-2">Personalisierte Betreuung</h3>
-        <p class="text-[var(--text-secondary)] text-sm leading-relaxed">Ihre Schönheitserfahrung durch persönliche
-          Betreuung und Liebe zum Detail zu verbessern.</p>
-      </div>
-      <div class="bg-[var(--background-light)] p-8 rounded-xl shadow-md dark:shadow-none transition-shadow">
-        <div class="p-4 bg-[var(--accent-color)] rounded-full mb-4 inline-grid place-items-center">
-          <span class="material-icons-outlined text-3xl text-[var(--primary-color)]">auto_awesome</span>
-        </div>
-        <h3 class="text-xl font-semibold text-[var(--text-primary)] mb-2">Transformation</h3>
-        <p class="text-[var(--text-secondary)] text-sm leading-relaxed">Wir glauben an die Kraft der Transformation,
-          nicht nur im Aussehen, sondern auch im Selbstvertrauen und Wohlbefinden.</p>
-      </div>
-      <div class="bg-[var(--background-light)] p-8 rounded-xl shadow-md dark:shadow-none transition-shadow">
-        <div class="p-4 bg-[var(--accent-color)] rounded-full mb-4 inline-grid place-items-center">
-          <span class="material-icons-outlined text-3xl text-[var(--primary-color)]">eco</span>
-        </div>
-        <h3 class="text-xl font-semibold text-[var(--text-primary)] mb-2">Nachhaltigkeit</h3>
-        <p class="text-[var(--text-secondary)] text-sm leading-relaxed">Unser Engagement geht über den Stuhl hinaus und
-          umfasst umweltbewusste Entscheidungen für unsere Kunden und den Planeten.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="py-16 md:py-24 bg-[var(--background-light)]">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-12 md:mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)]">Lernen Sie unser Team kennen</h2>
-      <p class="text-[var(--text-secondary)] mt-3 text-lg max-w-xl mx-auto">Talentierte Stylisten, die sich dafür
-        einsetzen, dass Sie gut aussehen und sich gut fühlen.</p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
       <div
-        class="group relative text-center p-4 bg-[var(--background-dark)] rounded-xl shadow-sm dark:shadow-none transition-shadow duration-300">
+        class="group relative rounded-xl bg-[var(--background-dark)] p-4 text-center shadow-sm transition-shadow duration-300 dark:shadow-none"
+      >
         <div class="relative">
-          <img alt="Sophia Carter"
-            class="w-36 h-36 rounded-full mx-auto object-cover mb-4 border-4 border-[var(--background-light)] shadow-md dark:shadow-none"
-            src="https://images.unsplash.com/photo-1554151228-14d9def656e4" />
+          <img
+            alt="Sophia Carter"
+            class="mx-auto mb-4 h-36 w-36 rounded-full border-4 border-[var(--background-light)] object-cover shadow-md dark:shadow-none"
+            src="https://images.unsplash.com/photo-1554151228-14d9def656e4"
+          />
           <div
-            class="absolute inset-0 bg-[var(--background-light)] bg-opacity-80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p class="text-[var(--text-secondary)] text-xs px-4">"Liebt es, Looks mit kräftigen Farben zu verwandeln!"
+            class="bg-opacity-80 absolute inset-0 flex items-center justify-center rounded-full bg-[var(--background-light)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          >
+            <p class="px-4 text-xs text-[var(--text-secondary)]">
+              "Liebt es, Looks mit kräftigen Farben zu verwandeln!"
             </p>
           </div>
         </div>
         <div>
-          <p class="text-[var(--text-primary)] text-lg font-semibold leading-normal">Sophia Carter</p>
-          <p class="text-[var(--primary-color)] text-sm font-medium leading-normal">Master Stylist</p>
+          <p
+            class="text-lg leading-normal font-semibold text-[var(--text-primary)]"
+          >
+            Sophia Carter
+          </p>
+          <p
+            class="text-sm leading-normal font-medium text-[var(--primary-color)]"
+          >
+            Master Stylist
+          </p>
         </div>
       </div>
       <div
-        class="group relative text-center p-4 bg-[var(--background-dark)] rounded-xl shadow-sm dark:shadow-none transition-shadow duration-300">
+        class="group relative rounded-xl bg-[var(--background-dark)] p-4 text-center shadow-sm transition-shadow duration-300 dark:shadow-none"
+      >
         <div class="relative">
-          <img alt="Ethan Walker"
-            class="w-36 h-36 rounded-full mx-auto object-cover mb-4 border-4 border-[var(--background-light)] shadow-md dark:shadow-none"
-            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" />
+          <img
+            alt="Ethan Walker"
+            class="mx-auto mb-4 h-36 w-36 rounded-full border-4 border-[var(--background-light)] object-cover shadow-md dark:shadow-none"
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"
+          />
           <div
-            class="absolute inset-0 bg-[var(--background-light)] bg-opacity-80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p class="text-[var(--text-secondary)] text-xs px-4">"Leidenschaft für die Kreation lebendiger,
-              individueller Farbmischungen."
+            class="bg-opacity-80 absolute inset-0 flex items-center justify-center rounded-full bg-[var(--background-light)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          >
+            <p class="px-4 text-xs text-[var(--text-secondary)]">
+              "Leidenschaft für die Kreation lebendiger, individueller
+              Farbmischungen."
             </p>
           </div>
         </div>
         <div>
-          <p class="text-[var(--text-primary)] text-lg font-semibold leading-normal">Ethan Walker</p>
-          <p class="text-[var(--primary-color)] text-sm font-medium leading-normal">Farbspezialist</p>
+          <p
+            class="text-lg leading-normal font-semibold text-[var(--text-primary)]"
+          >
+            Ethan Walker
+          </p>
+          <p
+            class="text-sm leading-normal font-medium text-[var(--primary-color)]"
+          >
+            Farbspezialist
+          </p>
         </div>
       </div>
       <div
-        class="group relative text-center p-4 bg-[var(--background-dark)] rounded-xl shadow-sm dark:shadow-none transition-shadow duration-300">
+        class="group relative rounded-xl bg-[var(--background-dark)] p-4 text-center shadow-sm transition-shadow duration-300 dark:shadow-none"
+      >
         <div class="relative">
-          <img alt="Isabella Reed"
-            class="w-36 h-36 rounded-full mx-auto object-cover mb-4 border-4 border-[var(--background-light)] shadow-md dark:shadow-none"
-            src="https://images.unsplash.com/photo-1580489944761-15a19d654956" />
+          <img
+            alt="Isabella Reed"
+            class="mx-auto mb-4 h-36 w-36 rounded-full border-4 border-[var(--background-light)] object-cover shadow-md dark:shadow-none"
+            src="https://images.unsplash.com/photo-1580489944761-15a19d654956"
+          />
           <div
-            class="absolute inset-0 bg-[var(--background-light)] bg-opacity-80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p class="text-[var(--text-secondary)] text-xs px-4">"Expertin für nahtlose, natürlich aussehende
-              Extensions."</p>
-          </div>
-        </div>
-        <div>
-          <p class="text-[var(--text-primary)] text-lg font-semibold leading-normal">Isabella Reed</p>
-          <p class="text-[var(--primary-color)] text-sm font-medium leading-normal">Extension-Expertin</p>
-        </div>
-      </div>
-      <div
-        class="group relative text-center p-4 bg-[var(--background-dark)] rounded-xl shadow-sm dark:shadow-none transition-shadow duration-300">
-        <div class="relative">
-          <img alt="Noah Bennett"
-            class="w-36 h-36 rounded-full mx-auto object-cover mb-4 border-4 border-[var(--background-light)] shadow-md dark:shadow-none"
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" />
-          <div
-            class="absolute inset-0 bg-[var(--background-light)] bg-opacity-80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p class="text-[var(--text-secondary)] text-xs px-4">"Kreiert scharfe, moderne Schnitte für jeden Herrn."
+            class="bg-opacity-80 absolute inset-0 flex items-center justify-center rounded-full bg-[var(--background-light)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          >
+            <p class="px-4 text-xs text-[var(--text-secondary)]">
+              "Expertin für nahtlose, natürlich aussehende Extensions."
             </p>
           </div>
         </div>
         <div>
-          <p class="text-[var(--text-primary)] text-lg font-semibold leading-normal">Noah Bennett</p>
-          <p class="text-[var(--primary-color)] text-sm font-medium leading-normal">Barbier</p>
+          <p
+            class="text-lg leading-normal font-semibold text-[var(--text-primary)]"
+          >
+            Isabella Reed
+          </p>
+          <p
+            class="text-sm leading-normal font-medium text-[var(--primary-color)]"
+          >
+            Extension-Expertin
+          </p>
+        </div>
+      </div>
+      <div
+        class="group relative rounded-xl bg-[var(--background-dark)] p-4 text-center shadow-sm transition-shadow duration-300 dark:shadow-none"
+      >
+        <div class="relative">
+          <img
+            alt="Noah Bennett"
+            class="mx-auto mb-4 h-36 w-36 rounded-full border-4 border-[var(--background-light)] object-cover shadow-md dark:shadow-none"
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+          />
+          <div
+            class="bg-opacity-80 absolute inset-0 flex items-center justify-center rounded-full bg-[var(--background-light)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          >
+            <p class="px-4 text-xs text-[var(--text-secondary)]">
+              "Kreiert scharfe, moderne Schnitte für jeden Herrn."
+            </p>
+          </div>
+        </div>
+        <div>
+          <p
+            class="text-lg leading-normal font-semibold text-[var(--text-primary)]"
+          >
+            Noah Bennett
+          </p>
+          <p
+            class="text-sm leading-normal font-medium text-[var(--primary-color)]"
+          >
+            Barbier
+          </p>
         </div>
       </div>
     </div>
