@@ -108,6 +108,20 @@ document.addEventListener("DOMContentLoaded", () => {
         // This handles the "All" filter on the main blog page
         pill.classList.add("pill-active");
       }
+
+      // Preserve scroll position on click
+      pill.addEventListener("click", () => {
+        sessionStorage.setItem("scrollPosition", window.scrollY);
+      });
     });
   }
+
+  // Restore scroll position on page load
+  window.addEventListener("load", () => {
+    const scrollPosition = sessionStorage.getItem("scrollPosition");
+    if (scrollPosition) {
+      window.scrollTo(0, parseInt(scrollPosition, 10));
+      sessionStorage.removeItem("scrollPosition");
+    }
+  });
 });
