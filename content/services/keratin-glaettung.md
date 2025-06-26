@@ -8,7 +8,7 @@ time_estimate = "pro Stunde"
 image = "https://placehold.co/600x400/4d2224/ffffff?text=Keratin-Glättung"
 before_image = "https://placehold.co/600x400/4d2224/ffffff?text=Before"
 after_image = "https://placehold.co/600x400/4d2224/ffffff?text=After"
-service_categories = ["Keratin-Glättung"]
+service_categories = ["Umstyling"]
 rabatte = []
 zusatzoptionen = []
 +++

@@ -8,7 +8,7 @@ time_estimate = "pro Stunde"
 image = "https://placehold.co/600x400/4d2224/ffffff?text=Frisieren+%26+Hochstecken"
 before_image = "https://placehold.co/600x400/4d2224/ffffff?text=Before"
 after_image = "https://placehold.co/600x400/4d2224/ffffff?text=After"
-service_categories = ["Frisieren & Hochstecken"]
+service_categories = ["Umstyling"]
 rabatte = []
 zusatzoptionen = []
 +++
