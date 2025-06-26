@@ -1,21 +1,42 @@
 {{ define "main" }}
-<section class="px-6 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-10 lg:py-16 bg-[var(--background-dark)]">
-  <div class="layout-content-container flex flex-col max-w-4xl flex-1 gap-8">
+<section
+  class="flex flex-1 justify-center bg-[var(--background-dark)] px-6 py-10 sm:px-10 md:px-20 lg:px-40 lg:py-16"
+>
+  <div class="layout-content-container flex max-w-4xl flex-1 flex-col gap-8">
     <div class="text-center">
-      <h1 class="text-[var(--text-primary)] tracking-tight text-4xl sm:text-5xl font-bold leading-tight">{{ .Title }}</h1>
-      <p class="text-[var(--text-secondary)] text-lg sm:text-xl font-medium mt-2">{{ .Date.Format "Published on January 2, 2006" }}</p>
+      <h1
+        class="text-4xl leading-tight font-bold tracking-tight text-[var(--text-primary)] sm:text-5xl"
+      >
+        {{ .Title }}
+      </h1>
+      <p
+        class="mt-2 text-lg font-medium text-[var(--text-secondary)] sm:text-xl"
+      >
+        {{ .Date.Format "Published on January 2, 2006" }}
+      </p>
     </div>
-    <div class="bg-[var(--background-light)] shadow-sm dark:shadow-none rounded-2xl p-6 sm:p-8">
+    <div
+      class="rounded-2xl bg-[var(--background-light)] p-6 shadow-sm sm:p-8 dark:shadow-none"
+    >
       {{ with .Params.image }}
       <div class="mb-8">
-        <img src="{{ . }}" alt="{{ $.Title }}" class="w-full h-auto rounded-lg shadow-md">
+        <img
+          src="{{ . }}"
+          alt="{{ $.Title }}"
+          class="h-auto w-full rounded-lg shadow-md"
+        />
       </div>
       {{ end }}
-      <div class="prose dark:prose-invert max-w-none text-[var(--text-secondary)] text-base md:text-lg font-normal leading-relaxed mb-8">
+      <div
+        class="prose dark:prose-invert mb-8 max-w-none text-base leading-relaxed font-normal text-[var(--text-secondary)] md:text-lg"
+      >
         {{ .Content }}
       </div>
       <div class="flex justify-center">
-        <a href="{{ (.Site.GetPage "section" "blog").Permalink }}" class="flex min-w-[180px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-8 text-base font-bold leading-normal tracking-[0.015em] shadow-sm dark:shadow-none hover:shadow-xl transform hover:scale-105 transition-all duration-300 bg-[var(--primary-color)] text-[var(--text-on-primary)] hover:bg-opacity-90">
+        <a
+          href="javascript:history.back()"
+          class="hover:bg-opacity-90 flex h-12 max-w-[480px] min-w-[180px] transform cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--primary-color)] px-8 text-base leading-normal font-bold tracking-[0.015em] text-[var(--text-on-primary)] shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-xl dark:shadow-none"
+        >
           <span class="truncate">Zurück zum Blog</span>
         </a>
       </div>

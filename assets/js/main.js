@@ -90,4 +90,24 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
+
+  // Blog filter
+  const blogFilterPills = document.querySelectorAll(".blog-filter-pill");
+
+  if (blogFilterPills.length > 0) {
+    const currentPath = window.location.pathname;
+
+    blogFilterPills.forEach((pill) => {
+      const pillPath = new URL(pill.href).pathname;
+      if (currentPath === pillPath) {
+        pill.classList.add("pill-active");
+      } else if (
+        currentPath === "/blog/" &&
+        pill.textContent.trim().toLowerCase() === "all"
+      ) {
+        // This handles the "All" filter on the main blog page
+        pill.classList.add("pill-active");
+      }
+    });
+  }
 });
