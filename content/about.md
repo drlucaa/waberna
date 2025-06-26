@@ -4,6 +4,9 @@ date = 2025-06-24T10:00:00+02:00
 draft = false
 description = "Entdecken Sie die Leidenschaft und das Engagement hinter Waberna."
 image = "images/about/founders.jpeg"
+subtitle = "Gegründet von Amelia Harper & Olivia Bennett im Jahr 2018"
 +++
 
-Waberna wurde aus einem gemeinsamen Traum geboren: einen Zufluchtsort zu schaffen, an dem Kunstfertigkeit auf Selbstpflege trifft. Amelia und Olivia, beide erfahrene Stylistinnen mit einer Leidenschaft für Innovation, stellten sich einen Raum vor, der über das traditionelle Salonerlebnis hinausgeht. Ihre Reise, angetrieben von Kreativität und dem Bekenntnis zur Exzellenz, hat Waberna zu dem lebendigen Zentrum gemacht, das es heute ist. Wir glauben daran, eine warme, persönliche Verbindung zu jedem Kunden zu pflegen und jeden Besuch zu einem unvergesslichen und erhebenden Erlebnis zu machen.
+Wir, Regina und Vanessa, haben am 1. Juli 2025 den Coiffeur Tscharner übernommen und führen ihn seither mit neuem Namen und frischem Wind als Coiffeur Waberna weiter.
+Regina hat ihre Ausbildung bei Coiffeur Tscharner gemacht und war insgesamt 4 jahre dort. Vanessa kam 2022 dazu und war drei Jahre Teil des Teams.
+Gemeinsam haben wir den Schritt in die Selbstständigkeit gewagt und unseren Traum vom eigenen Geschäft verwirklicht. Mit viel Herzblut, der bewährten Tradition und einer frischen Note freuen wir uns, unsere Kundinnen und Kunden in vertrauter Umgebung neu zu begeistern.
