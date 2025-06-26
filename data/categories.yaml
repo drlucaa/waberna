@@ -1,16 +1,12 @@
-- title: Schneiden
-  icon: content_cut
-  description: Tailored to Your Personality.
-  link: services/?category=haircuts
-- title: Färben
+- title: Damen
+  icon: woman
+  description: Haarschnitte, Styling und Pflege für Damen.
+  link: services/?category=damen
+- title: Herren
+  icon: man
+  description: Haarschnitte und Styling für Herren.
+  link: services/?category=herren
+- title: Farbe
   icon: palette
-  description: Express yourself with color.
-  link: services/?category=coloring
-- title: Extensions
-  icon: waves
-  description: Add length and volume.
-  link: services/?category=extensions
-- title: Styling
-  icon: auto_fix_high
-  description: Perfect for any occasion.
-  link: services/?category=styling
+  description: Kreative Farbveränderungen und Strähnentechniken.
+  link: services/?category=farbe
