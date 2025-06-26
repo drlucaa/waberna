@@ -45,7 +45,7 @@ weight = 50
 
 [[menu.social]]
 name = "Instagram"
-url = "https://www.instagram.com/"
+url = "https://www.instagram.com/coiffeur_waberna"
 weight = 10
 [menu.social.params]
 icon = "icons/instagram.svg"
