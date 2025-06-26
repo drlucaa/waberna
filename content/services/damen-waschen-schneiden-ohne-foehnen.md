@@ -1,0 +1,16 @@
++++
+title = "Damen – Waschen, Schneiden, ohne Föhnen"
+date = 2025-06-26
+draft = false
+description = "Das Haar wird nach der ausführlichen Besprechung gewaschen, mit einer Kopfmassage und Pflege behandelt, geschnitten und leicht mit dem Handtuch getrocknet."
+price = "57.50 CHF"
+time_estimate = "45 Minuten"
+image = "https://placehold.co/600x400/4d2224/ffffff?text=Damen+Waschen+Schneiden+Ohne+Föhnen"
+before_image = "https://placehold.co/600x400/4d2224/ffffff?text=Before"
+after_image = "https://placehold.co/600x400/4d2224/ffffff?text=After"
+service_categories = ["Damen"]
+rabatte = ["Studenten (20–24 Jahre): 15 %", "Teenager (16–19 Jahre): 20 %"]
+zusatzoptionen = []
++++
+
+Das Haar wird nach der ausführlichen Besprechung gewaschen, mit einer Kopfmassage und Pflege behandelt, geschnitten und leicht mit dem Handtuch getrocknet.

@@ -2,7 +2,7 @@
 <section
   class="flex flex-1 justify-center bg-[var(--background-dark)] px-6 py-10 sm:px-10 md:px-20 lg:px-40 lg:py-16"
 >
-  <div class="layout-content-container flex max-w-4xl flex-1 flex-col gap-8">
+  <div class="layout-content-container flex max-w-4xl flex-col gap-8">
     <div class="text-center">
       <h1
         class="text-4xl leading-tight font-bold tracking-tight text-[var(--text-primary)] sm:text-5xl"
@@ -60,11 +60,66 @@
           </div>
         </div>
       </div>
+
+      {{ if or .Params.rabatte .Params.zusatzoptionen }}
       <div
-        class="prose dark:prose-invert mb-8 max-w-none text-base leading-relaxed font-normal text-[var(--text-secondary)] md:text-lg"
+        class="mb-8 grid grid-cols-1 gap-6 {{ if not (and .Params.rabatte .Params.zusatzoptionen) }}place-items-center{{ else }}sm:grid-cols-2{{ end }}"
+      >
+        {{ if .Params.rabatte }}
+        <div
+          class="flex w-full items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
+        >
+          <span
+            class="material-icons-outlined text-2xl text-[var(--primary-color)]"
+            >discount</span
+          >
+          <div>
+            <p
+              class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
+            >
+              Rabatte
+            </p>
+            <div
+              class="text-base leading-normal font-semibold text-[var(--text-primary)]"
+            >
+              {{ range .Params.rabatte }}
+              <p>{{ . }}</p>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }} {{ if .Params.zusatzoptionen }}
+        <div
+          class="flex w-full items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
+        >
+          <span
+            class="material-icons-outlined text-2xl text-[var(--primary-color)]"
+            >add_circle_outline</span
+          >
+          <div>
+            <p
+              class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
+            >
+              Zusatzoptionen
+            </p>
+            <div
+              class="text-base leading-normal font-semibold text-[var(--text-primary)]"
+            >
+              {{ range .Params.zusatzoptionen }}
+              <p>{{ . }}</p>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+      <div
+        class="prose dark:prose-invert mb-8 max-w-none text-center text-base leading-relaxed font-normal text-[var(--text-secondary)] md:text-lg"
       >
         {{ .Content }}
       </div>
+
       {{ if and .Params.before_image .Params.after_image }}
       <h2
         class="mb-6 text-center text-2xl leading-tight font-bold tracking-tight text-[var(--text-primary)] sm:text-3xl"
