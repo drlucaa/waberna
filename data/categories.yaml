@@ -1,0 +1,16 @@
+- title: Schneiden
+  icon: content_cut
+  description: Tailored to Your Personality.
+  link: services/?category=haircuts
+- title: Färben
+  icon: palette
+  description: Express yourself with color.
+  link: services/?category=coloring
+- title: Extensions
+  icon: waves
+  description: Add length and volume.
+  link: services/?category=extensions
+- title: Styling
+  icon: auto_fix_high
+  description: Perfect for any occasion.
+  link: services/?category=styling
