@@ -4,7 +4,7 @@
   <a
     class="site-title text-4xl font-bold text-[var(--primary-color)]"
     href="{{ .Site.BaseURL }}"
-    >{{ .Site.Title }}</a
+    >{{ .Site.Params.logo }}</a
   >
   <nav class="hidden items-center gap-6 md:flex">
     {{ range .Site.Menus.main }}
