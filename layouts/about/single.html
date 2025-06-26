@@ -50,6 +50,7 @@
       </h2>
     </div>
     <div class="grid gap-8 text-center md:grid-cols-3">
+      {{ range .Site.Data.mission }}
       <div
         class="rounded-xl bg-[var(--background-light)] p-8 shadow-md transition-shadow dark:shadow-none"
       >
@@ -58,55 +59,17 @@
         >
           <span
             class="material-icons-outlined text-3xl text-[var(--primary-color)]"
-            >spa</span
+            >{{ .icon }}</span
           >
         </div>
         <h3 class="mb-2 text-xl font-semibold text-[var(--text-primary)]">
-          Personalisierte Betreuung
+          {{ .title }}
         </h3>
         <p class="text-sm leading-relaxed text-[var(--text-secondary)]">
-          Ihre Schönheitserfahrung durch persönliche Betreuung und Liebe zum
-          Detail zu verbessern.
+          {{ .description }}
         </p>
       </div>
-      <div
-        class="rounded-xl bg-[var(--background-light)] p-8 shadow-md transition-shadow dark:shadow-none"
-      >
-        <div
-          class="mb-4 inline-grid place-items-center rounded-full bg-[var(--accent-color)] p-4"
-        >
-          <span
-            class="material-icons-outlined text-3xl text-[var(--primary-color)]"
-            >auto_awesome</span
-          >
-        </div>
-        <h3 class="mb-2 text-xl font-semibold text-[var(--text-primary)]">
-          Transformation
-        </h3>
-        <p class="text-sm leading-relaxed text-[var(--text-secondary)]">
-          Wir glauben an die Kraft der Transformation, nicht nur im Aussehen,
-          sondern auch im Selbstvertrauen und Wohlbefinden.
-        </p>
-      </div>
-      <div
-        class="rounded-xl bg-[var(--background-light)] p-8 shadow-md transition-shadow dark:shadow-none"
-      >
-        <div
-          class="mb-4 inline-grid place-items-center rounded-full bg-[var(--accent-color)] p-4"
-        >
-          <span
-            class="material-icons-outlined text-3xl text-[var(--primary-color)]"
-            >eco</span
-          >
-        </div>
-        <h3 class="mb-2 text-xl font-semibold text-[var(--text-primary)]">
-          Nachhaltigkeit
-        </h3>
-        <p class="text-sm leading-relaxed text-[var(--text-secondary)]">
-          Unser Engagement geht über den Stuhl hinaus und umfasst umweltbewusste
-          Entscheidungen für unsere Kunden und den Planeten.
-        </p>
-      </div>
+      {{ end }}
     </div>
   </div>
 </section>
