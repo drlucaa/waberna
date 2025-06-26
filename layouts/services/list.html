@@ -35,16 +35,20 @@
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
       {{ range .Pages }}
       <div
-        class="service-card flex flex-col gap-4 overflow-hidden rounded-xl bg-[var(--background-light)] shadow-sm transition-shadow duration-300 dark:shadow-none"
+        class="service-card group flex flex-col gap-4 overflow-hidden rounded-xl bg-[var(--background-light)] shadow-sm transition-shadow duration-300 dark:shadow-none"
         data-category="{{ range .Params.service_categories }}{{ . | lower }} {{ end }}"
       >
-        <div
-          class="aspect-[4/3] w-full bg-cover bg-center bg-no-repeat"
-          style='background-image: url("{{ .Params.image }}");'
-        ></div>
+        <div class="overflow-hidden">
+          <a href="{{ .Permalink }}">
+            <div
+              class="aspect-[4/3] w-full transform bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105"
+              style='background-image: url("{{ .Params.image }}");'
+            ></div>
+          </a>
+        </div>
         <div class="flex flex-grow flex-col p-5">
           <h3 class="mb-1 text-lg font-semibold text-[var(--text-primary)]">
-            {{ .Title }}
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
           </h3>
           <p class="mb-3 text-sm text-[var(--text-secondary)]">
             {{ .Params.price }}
