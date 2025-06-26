@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-  {{ partial "head.html" . }}
-
-  {{- partial "dev/dev-tools.html" . -}}
-  <body class="flex min-h-dvh flex-col sm:min-h-screen">
+  {{ partial "head.html" . }} {{- partial "dev/dev-tools.html" . -}}
+  <body
+    class="flex min-h-dvh flex-col bg-[var(--background-light)] sm:min-h-screen"
+  >
     {{- partial "header.html" . -}}
-    <main class="flex-1 grow bg-[var(--background-dark)] shadow-sm">
-      {{- block "main" . }}{{- end }}
-    </main>
+    <main class="flex-1 grow shadow-sm">{{- block "main" . }}{{- end }}</main>
     {{- partial "footer.html" . -}}
   </body>
 </html>
