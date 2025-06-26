@@ -13,7 +13,7 @@
       </a>
       {{ range .Site.Taxonomies.categories.ByCount }}
       <a href="{{ .Page.Permalink }}" class="blog-filter-pill h-10 shrink-0 inline-flex items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] hover:bg-[var(--accent-color)] transition-colors px-4 sm:px-5 text-sm sm:text-base font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)]">
-        {{ .Name | title }} ({{ .Count }})
+        {{ .Name | title }}
       </a>
       {{ end }}
     </div>
