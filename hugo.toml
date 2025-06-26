@@ -1,6 +1,6 @@
 baseURL = 'https://waberna.ch/'
 languageCode = 'de-ch'
-title = 'Waberna'
+title = 'WB'
 
 ignoreLogs = ["warning-goldmark-raw-html"]
 

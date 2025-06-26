@@ -31,6 +31,8 @@ html.dark {
   color: white !important;
 }
 
-.sample {
-  @apply text-red-400 italic;
+.site-title {
+  font-family: "sirenia", sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
