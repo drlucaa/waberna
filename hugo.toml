@@ -11,6 +11,7 @@ booking_label = "Jetzt Buchen"
 phone = "+41 31 123 45 67"
 address = "Musterstrasse 1, 3084 Wabern, Switzerland"
 hero_background_image = "images/hero.jpeg"
+placeholder_image = "images/placeholder.jpg"
 
 [taxonomies]
 category = "categories"

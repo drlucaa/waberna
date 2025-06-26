@@ -1,25 +1,54 @@
-<article class="group grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+<article class="group grid grid-cols-1 items-start gap-6 md:grid-cols-3">
   <div class="md:col-span-1">
-    <a class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" href="{{ .Permalink }}">
+    <a
+      class="block overflow-hidden rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl"
+      href="{{ .Permalink }}"
+    >
       {{ if .Params.image }}
-      <img alt="{{ .Title }}" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="{{ .Params.image }}"/>
+      <img
+        alt="{{ .Title }}"
+        class="h-48 w-full transform object-cover transition-transform duration-300 group-hover:scale-105"
+        src="{{ .Params.image | relURL }}"
+      />
       {{ else }}
-      <img alt="{{ .Title }}" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="https://placehold.co/600x400/f5d5d5/181111?text=Waberna"/>
+      <img
+        alt="{{ .Title }}"
+        class="h-48 w-full transform object-cover transition-transform duration-300 group-hover:scale-105"
+        src="{{ .Site.Params.placeholder_image | relURL }}"
+      />
       {{ end }}
     </a>
   </div>
-  <div class="md:col-span-2 space-y-3">
-    <p class="text-sm text-[var(--text-secondary)]">{{ .Date.Format "January 2, 2006" }}</p>
-    <h3 class="text-2xl font-semibold text-[var(--text-primary)] group-hover:text-[var(--primary-color)] transition-colors">
+  <div class="space-y-3 md:col-span-2">
+    <p class="text-sm text-[var(--text-secondary)]">
+      {{ .Date.Format "January 2, 2006" }}
+    </p>
+    <h3
+      class="text-2xl font-semibold text-[var(--text-primary)] transition-colors group-hover:text-[var(--primary-color)]"
+    >
       <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h3>
-    <div class="text-[var(--text-secondary)] leading-relaxed">
+    <div class="leading-relaxed text-[var(--text-secondary)]">
       {{ .Summary }}
     </div>
-    <a class="inline-flex items-center text-[var(--primary-color)] font-medium hover:underline" href="{{ .Permalink }}">
+    <a
+      class="inline-flex items-center font-medium text-[var(--primary-color)] hover:underline"
+      href="{{ .Permalink }}"
+    >
       Weiterlesen
-      <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+      <svg
+        class="ml-1 h-4 w-4"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M17 8l4 4m0 0l-4 4m4-4H3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        ></path>
       </svg>
     </a>
   </div>

@@ -21,7 +21,7 @@
       {{ with .Params.image }}
       <div class="mb-8">
         <img
-          src="{{ . }}"
+          src="{{ . | relURL }}"
           alt="{{ $.Title }}"
           class="h-auto w-full rounded-lg shadow-md"
         />

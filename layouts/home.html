@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section
   class="relative flex min-h-[calc(100vh-80px)] items-center justify-center bg-cover bg-center bg-no-repeat px-4 py-16 text-center md:min-h-[600px]"
-  style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("{{ .Site.Params.hero_background_image }}");'
+  style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("{{ .Site.Params.hero_background_image | relURL }}");'
 >
   <div class="mx-auto max-w-3xl">
     <h1

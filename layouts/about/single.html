@@ -35,7 +35,7 @@
       <div
         class="aspect-[4/3] rounded-xl bg-cover bg-center bg-no-repeat shadow-xl transition-transform duration-300 hover:scale-105 dark:shadow-none"
         style="
-          background-image: url(&quot;https://images.unsplash.com/photo-1525222285365-d6bfe94ec598&quot;);
+          background-image: url('{{ .Params.image | relURL }}');
         "
       ></div>
     </div>
