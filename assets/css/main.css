@@ -4,9 +4,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --primary-color: #e92932;
+  --primary-color: #369137;
   --secondary-color: #380707;
-  --accent-color: #f5d5d5;
+  --accent-color: #cbe8ca;
   --text-primary: #181111;
   --text-secondary: #5b5b5b;
   --text-on-primary: #ffffff;
@@ -16,9 +16,9 @@
 
 /* Dark Mode Color Palette */
 html.dark {
-  --primary-color: #e92932;
+  --primary-color: #369137;
   --secondary-color: #380707;
-  --accent-color: #4d2224;
+  --accent-color: #aad4a9;
   --text-primary: #f0f0f0;
   --text-secondary: #a0a0a0;
   --text-on-primary: #ffffff;
