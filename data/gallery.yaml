@@ -1,28 +1,24 @@
-- column:
-    - src: https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg
-      alt: ""
-    - src: https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg
-      alt: ""
-    - src: https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg
-      alt: ""
-- column:
-    - src: https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg
-      alt: ""
-    - src: https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg
-      alt: ""
-    - src: https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg
-      alt: ""
-- column:
-    - src: https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg
-      alt: ""
-    - src: https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg
-      alt: ""
-    - src: https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg
-      alt: ""
-- column:
-    - src: https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg
-      alt: ""
-    - src: https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg
-      alt: ""
-    - src: https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg
-      alt: ""
+- src: "images/gallery/image1.jpeg"
+  alt: ""
+- src: "images/gallery/image2.jpeg"
+  alt: ""
+- src: "images/gallery/image3.jpeg"
+  alt: ""
+- src: "images/gallery/image4.jpeg"
+  alt: ""
+- src: "images/gallery/image5.jpeg"
+  alt: ""
+- src: "images/gallery/image6.jpeg"
+  alt: ""
+- src: "images/gallery/image7.jpeg"
+  alt: ""
+- src: "images/gallery/image8.jpeg"
+  alt: ""
+- src: "images/gallery/image9.jpeg"
+  alt: ""
+- src: "images/gallery/image10.jpeg"
+  alt: ""
+- src: "images/gallery/image11.jpeg"
+  alt: ""
+- src: "images/gallery/image12.jpeg"
+  alt: ""

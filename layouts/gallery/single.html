@@ -19,19 +19,15 @@
   </div>
 </section>
 
-<section class="bg-[var(--background-light)] px-6 py-16 md:py-24">
-  <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+<section class="bg-[var(--background-light)] px-12 py-16 md:py-24">
+  <div class="mx-auto columns-2 gap-4 md:columns-3 lg:columns-4">
     {{ range .Site.Data.gallery }}
-    <div class="grid gap-4">
-      {{ range .column }}
-      <div class="group overflow-hidden rounded-lg">
-        <img
-          class="h-auto max-w-full transform transition-transform duration-300 group-hover:scale-105"
-          src="{{ .src | relURL }}"
-          alt="{{ .alt }}"
-        />
-      </div>
-      {{ end }}
+    <div class="group mb-4 break-inside-avoid overflow-hidden rounded-lg">
+      <img
+        class="h-auto w-full max-w-full transform transition-transform duration-300 group-hover:scale-105"
+        src="{{ .src | relURL }}"
+        alt="{{ .alt }}"
+      />
     </div>
     {{ end }}
   </div>
