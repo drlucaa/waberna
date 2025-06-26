@@ -1,0 +1,24 @@
+<div
+  class="group relative rounded-xl bg-[var(--background-dark)] p-4 text-center shadow-sm transition-shadow duration-300 dark:shadow-none"
+>
+  <div class="relative">
+    <img
+      alt="{{ .name }}"
+      class="mx-auto mb-4 h-36 w-36 rounded-full border-4 border-[var(--background-light)] object-cover shadow-md dark:shadow-none"
+      src="{{ .image }}"
+    />
+  </div>
+  <div>
+    <p class="text-lg leading-normal font-semibold text-[var(--text-primary)]">
+      {{ .name }}
+    </p>
+    <p
+      class="mb-2 text-sm leading-normal font-medium text-[var(--primary-color)]"
+    >
+      {{ .title }}
+    </p>
+    <p class="px-4 text-xs text-[var(--text-secondary)] italic">
+      "{{ .quote }}"
+    </p>
+  </div>
+</div>
