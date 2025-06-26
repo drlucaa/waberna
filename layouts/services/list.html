@@ -1,34 +1,58 @@
 {{ define "main" }}
-<section class="relative bg-cover bg-center py-24 md:py-32" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%), url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f");'>
+<section
+  class="relative bg-cover bg-center py-24 md:py-32"
+  style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%), url("{{ .Site.Params.hero_background_image | relURL }}");'
+>
   <div class="container mx-auto px-6 text-center">
-    <h1 class="text-white text-4xl md:text-6xl font-bold tracking-tight leading-tight">{{ .Title }}</h1>
-    <p class="text-neutral-200 mt-4 text-lg md:text-xl max-w-2xl mx-auto">{{ .Description }}</p>
+    <h1
+      class="text-4xl leading-tight font-bold tracking-tight text-white md:text-6xl"
+    >
+      {{ .Title }}
+    </h1>
+    <p class="mx-auto mt-4 max-w-2xl text-lg text-neutral-200 md:text-xl">
+      {{ .Description }}
+    </p>
   </div>
 </section>
-<section class="py-12 sm:py-16 px-6 sm:px-10 bg-[var(--background-dark)]">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex justify-center gap-2 sm:gap-3 p-3 flex-wrap mb-8 sm:mb-12">
-      <button class="filter-pill h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] hover:bg-[var(--accent-color)] transition-colors px-4 sm:px-5 text-sm sm:text-base font-medium text-[var(--text-secondary)] pill-active" data-filter="all">
+<section class="bg-[var(--background-dark)] px-6 py-12 sm:px-10 sm:py-16">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-8 flex flex-wrap justify-center gap-2 p-3 sm:mb-12 sm:gap-3">
+      <button
+        class="filter-pill pill-active h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] px-4 text-sm font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--accent-color)] sm:px-5 sm:text-base"
+        data-filter="all"
+      >
         All
       </button>
       {{ range .Site.Taxonomies.service_categories.ByCount }}
-      <button class="filter-pill h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] hover:bg-[var(--accent-color)] transition-colors px-4 sm:px-5 text-sm sm:text-base font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)]" data-filter="{{ .Name | lower }}">
+      <button
+        class="filter-pill h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--background-light)] px-4 text-sm font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--accent-color)] hover:text-[var(--primary-color)] sm:px-5 sm:text-base"
+        data-filter="{{ .Name | lower }}"
+      >
         {{ .Name | title }}
       </button>
       {{ end }}
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
       {{ range .Pages }}
-      <div class="service-card flex flex-col gap-4 rounded-xl overflow-hidden shadow-sm dark:shadow-none transition-shadow duration-300 bg-[var(--background-light)]" data-category="{{ range .Params.service_categories }}{{ . | lower }} {{ end }}">
-        <div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" style='background-image: url("{{ .Params.image }}");'></div>
-        <div class="p-5 flex flex-col flex-grow">
-          <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-1">
+      <div
+        class="service-card flex flex-col gap-4 overflow-hidden rounded-xl bg-[var(--background-light)] shadow-sm transition-shadow duration-300 dark:shadow-none"
+        data-category="{{ range .Params.service_categories }}{{ . | lower }} {{ end }}"
+      >
+        <div
+          class="aspect-[4/3] w-full bg-cover bg-center bg-no-repeat"
+          style='background-image: url("{{ .Params.image }}");'
+        ></div>
+        <div class="flex flex-grow flex-col p-5">
+          <h3 class="mb-1 text-lg font-semibold text-[var(--text-primary)]">
             {{ .Title }}
           </h3>
-          <p class="text-sm text-[var(--text-secondary)] mb-3">
+          <p class="mb-3 text-sm text-[var(--text-secondary)]">
             {{ .Params.price }}
           </p>
-          <a href="{{ .Permalink }}" class="mt-auto w-full text-center rounded-full h-10 px-4 bg-[var(--accent-color)] hover:bg-[var(--primary-color)] text-[var(--primary-color)] hover:text-[var(--text-on-primary)] text-sm font-semibold transition-colors inline-flex items-center justify-center">
+          <a
+            href="{{ .Permalink }}"
+            class="mt-auto inline-flex h-10 w-full items-center justify-center rounded-full bg-[var(--accent-color)] px-4 text-center text-sm font-semibold text-[var(--primary-color)] transition-colors hover:bg-[var(--primary-color)] hover:text-[var(--text-on-primary)]"
+          >
             View Details
           </a>
         </div>

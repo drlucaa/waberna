@@ -1,11 +1,11 @@
 {{ define "main" }}
 <section
   class="relative bg-cover bg-center py-24 md:py-32"
-  style="
+  style='
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%),
-      url(&quot;https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f&quot;);
-  "
+      url("{{ .Site.Params.hero_background_image | relURL }}");
+  '
 >
   <div class="container mx-auto px-6 text-center">
     <h1
