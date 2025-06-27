@@ -38,10 +38,10 @@ weight = 30
 # pageRef = "/gallery"
 # weight = 40
 
-[[menu.main]]
-name = "Blog"
-pageRef = "/blog"
-weight = 50
+# [[menu.main]]
+# name = "Blog"
+# pageRef = "/blog"
+# weight = 50
 
 [[menu.social]]
 name = "Instagram"
