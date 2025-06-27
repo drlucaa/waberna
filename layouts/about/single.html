@@ -44,6 +44,23 @@
 
 <section class="bg-[var(--background-dark)] py-16 md:py-24">
   <div class="container mx-auto px-6">
+    <div class="mb-12 text-center md:mb-16">
+      <h2 class="text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
+        Lernen Sie unser Team kennen
+      </h2>
+      <p class="mx-auto mt-3 max-w-xl text-lg text-[var(--text-secondary)]">
+        Talentierte Stylisten, die sich dafür einsetzen, dass Sie gut aussehen
+        und sich gut fühlen.
+      </p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-12">
+      {{ range .Site.Data.team }} {{ partial "employee-card.html" . }} {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="bg-[var(--background-light)] py-16 md:py-24">
+  <div class="container mx-auto px-6">
     <div class="mb-12 text-center">
       <h2 class="text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
         Unsere Mission
@@ -54,7 +71,7 @@
     >
       {{ range .Site.Data.mission }}
       <div
-        class="rounded-xl bg-[var(--background-light)] p-8 shadow-md transition-shadow dark:shadow-none"
+        class="rounded-xl bg-[var(--background-dark)] p-8 text-center shadow-md transition-shadow dark:shadow-none"
       >
         <div
           class="mb-4 inline-grid place-items-center rounded-full bg-[var(--accent-color)] p-4"
@@ -72,23 +89,6 @@
         </p>
       </div>
       {{ end }}
-    </div>
-  </div>
-</section>
-
-<section class="bg-[var(--background-light)] py-16 md:py-24">
-  <div class="container mx-auto px-6">
-    <div class="mb-12 text-center md:mb-16">
-      <h2 class="text-3xl font-bold text-[var(--text-primary)] md:text-4xl">
-        Lernen Sie unser Team kennen
-      </h2>
-      <p class="mx-auto mt-3 max-w-xl text-lg text-[var(--text-secondary)]">
-        Talentierte Stylisten, die sich dafür einsetzen, dass Sie gut aussehen
-        und sich gut fühlen.
-      </p>
-    </div>
-    <div class="flex flex-wrap justify-center gap-12">
-      {{ range .Site.Data.team }} {{ partial "employee-card.html" . }} {{ end }}
     </div>
   </div>
 </section>
