@@ -1,11 +1,14 @@
 <header
   class="relative sticky top-0 z-50 flex items-center justify-between bg-[var(--background-light)] px-4 py-4 shadow-sm lg:px-10"
 >
-  <a
-    class="site-title text-4xl font-bold text-[var(--primary-color)]"
-    href="{{ .Site.BaseURL }}"
-    >{{ .Site.Params.logo }}</a
-  >
+  <div class="flex-1">
+    <a
+      class="site-title text-4xl font-bold text-[var(--primary-color)]"
+      href="{{ .Site.BaseURL }}"
+      >{{ .Site.Params.logo }}</a
+    >
+  </div>
+
   <nav class="hidden items-center gap-6 md:flex">
     {{ range .Site.Menus.main }}
     <a
@@ -15,7 +18,8 @@
     >
     {{ end }}
   </nav>
-  <div class="flex items-center gap-4">
+
+  <div class="flex flex-1 items-center justify-end gap-4">
     <button
       id="theme-toggle"
       type="button"
@@ -37,6 +41,7 @@
       <span class="material-icons-outlined">menu</span>
     </button>
   </div>
+
   <div
     id="mobile-menu"
     class="absolute top-full left-0 hidden w-full bg-[var(--background-light)] shadow-md md:hidden"
