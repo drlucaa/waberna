@@ -1,157 +1,160 @@
 {{ define "main" }}
 <section
-  class="flex flex-1 justify-center bg-[var(--background-dark)] px-6 py-10 sm:px-10 md:px-20 lg:px-40 lg:py-16"
+  class="bg-[var(--background-dark)] px-6 py-10 text-center sm:px-10 md:px-20 lg:px-40 lg:py-16"
 >
-  <div class="layout-content-container flex max-w-4xl flex-col gap-8">
-    <div class="text-center">
-      <h1
-        class="text-4xl leading-tight font-bold tracking-tight text-[var(--text-primary)] sm:text-5xl"
-      >
-        {{ .Title }}
-      </h1>
-      <p
-        class="mt-2 text-lg font-medium text-[var(--text-secondary)] sm:text-xl"
-      >
-        {{ .Params.description }}
-      </p>
-    </div>
-    <div
-      class="rounded-2xl bg-[var(--background-light)] p-6 shadow-sm sm:p-8 dark:shadow-none"
+  <div class="mx-auto max-w-4xl">
+    <h1
+      class="text-4xl leading-tight font-bold tracking-tight text-[var(--text-primary)] sm:text-5xl"
     >
-      <div class="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
-        <div
-          class="flex items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
-        >
-          <span
-            class="material-icons-outlined text-2xl text-[var(--primary-color)]"
-            >schedule</span
-          >
-          <div>
-            <p
-              class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
-            >
-              Zeit schätzung
-            </p>
-            <p
-              class="text-base leading-normal font-semibold text-[var(--text-primary)]"
-            >
-              {{ .Params.time_estimate }}
-            </p>
-          </div>
-        </div>
-        <div
-          class="flex items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
-        >
-          <span
-            class="material-icons-outlined text-2xl text-[var(--primary-color)]"
-            >sell</span
-          >
-          <div>
-            <p
-              class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
-            >
-              Preis
-            </p>
-            <p
-              class="text-base leading-normal font-semibold text-[var(--text-primary)]"
-            >
-              {{ .Params.price }}
-            </p>
-          </div>
-        </div>
-      </div>
+      {{ .Title }}
+    </h1>
+    <p
+      class="mx-auto mt-2 max-w-3xl text-lg font-medium text-[var(--text-secondary)] sm:text-xl"
+    >
+      {{ .Params.description }}
+    </p>
+  </div>
+</section>
 
-      {{ if or .Params.rabatte .Params.zusatzoptionen }}
+<section
+  class="bg-[var(--background-dark)] px-6 pb-10 sm:px-10 md:px-20 lg:px-40 lg:pb-16"
+>
+  <div
+    class="mx-auto max-w-5xl rounded-2xl bg-[var(--background-light)] p-6 shadow-sm sm:p-8 dark:shadow-none"
+  >
+    <div class="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
       <div
-        class="mb-8 grid grid-cols-1 gap-6 {{ if not (and .Params.rabatte .Params.zusatzoptionen) }}place-items-center{{ else }}sm:grid-cols-2{{ end }}"
+        class="flex items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
       >
-        {{ if .Params.rabatte }}
-        <div
-          class="flex w-full items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
+        <span
+          class="material-icons-outlined text-2xl text-[var(--primary-color)]"
+          >schedule</span
         >
-          <span
-            class="material-icons-outlined text-2xl text-[var(--primary-color)]"
-            >discount</span
+        <div>
+          <p
+            class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
           >
-          <div>
-            <p
-              class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
-            >
-              Rabatte
-            </p>
-            <div
-              class="text-base leading-normal font-semibold text-[var(--text-primary)]"
-            >
-              {{ range .Params.rabatte }}
-              <p>{{ . }}</p>
-              {{ end }}
-            </div>
-          </div>
-        </div>
-        {{ end }} {{ if .Params.zusatzoptionen }}
-        <div
-          class="flex w-full items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
-        >
-          <span
-            class="material-icons-outlined text-2xl text-[var(--primary-color)]"
-            >add_circle_outline</span
+            Zeit schätzung
+          </p>
+          <p
+            class="text-base leading-normal font-semibold text-[var(--text-primary)]"
           >
-          <div>
-            <p
-              class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
-            >
-              Zusatzoptionen
-            </p>
-            <div
-              class="text-base leading-normal font-semibold text-[var(--text-primary)]"
-            >
-              {{ range .Params.zusatzoptionen }}
-              <p>{{ . }}</p>
-              {{ end }}
-            </div>
-          </div>
+            {{ .Params.time_estimate }}
+          </p>
         </div>
-        {{ end }}
       </div>
-      {{ end }}
       <div
-        class="prose dark:prose-invert mb-8 max-w-none text-center text-base leading-relaxed font-normal text-[var(--text-secondary)] md:text-lg"
+        class="flex items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
       >
-        {{ .Content }}
+        <span
+          class="material-icons-outlined text-2xl text-[var(--primary-color)]"
+          >sell</span
+        >
+        <div>
+          <p
+            class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
+          >
+            Preis
+          </p>
+          <p
+            class="text-base leading-normal font-semibold text-[var(--text-primary)]"
+          >
+            {{ .Params.price }}
+          </p>
+        </div>
       </div>
+    </div>
 
-      {{ if and .Params.before_image .Params.after_image }}
-      <h2
-        class="mb-6 text-center text-2xl leading-tight font-bold tracking-tight text-[var(--text-primary)] sm:text-3xl"
+    {{ if or .Params.rabatte .Params.zusatzoptionen }}
+    <div
+      class="mb-8 grid grid-cols-1 gap-6 {{ if not (and .Params.rabatte .Params.zusatzoptionen) }}place-items-center{{ else }}sm:grid-cols-2{{ end }}"
+    >
+      {{ if .Params.rabatte }}
+      <div
+        class="flex w-full items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
       >
-        Before & After Gallery
-      </h2>
-      <div class="mb-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
-        <div class="flex flex-col items-center gap-2">
+        <span
+          class="material-icons-outlined text-2xl text-[var(--primary-color)]"
+          >discount</span
+        >
+        <div>
+          <p
+            class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
+          >
+            Rabatte
+          </p>
           <div
-            class="aspect-[4/3] w-full rounded-xl bg-cover bg-center bg-no-repeat shadow-sm dark:shadow-none"
-            style='background-image: url("{{ .Params.before_image | relURL }}");'
-          ></div>
-          <p class="text-sm font-medium text-[var(--text-secondary)]">Before</p>
+            class="text-base leading-normal font-semibold text-[var(--text-primary)]"
+          >
+            {{ range .Params.rabatte }}
+            <p>{{ . }}</p>
+            {{ end }}
+          </div>
         </div>
-        <div class="flex flex-col items-center gap-2">
+      </div>
+      {{ end }} {{ if .Params.zusatzoptionen }}
+      <div
+        class="flex w-full items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
+      >
+        <span
+          class="material-icons-outlined text-2xl text-[var(--primary-color)]"
+          >add_circle_outline</span
+        >
+        <div>
+          <p
+            class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
+          >
+            Zusatzoptionen
+          </p>
           <div
-            class="aspect-[4/3] w-full rounded-xl bg-cover bg-center bg-no-repeat shadow-sm dark:shadow-none"
-            style='background-image: url("{{ .Params.after_image | relURL }}");'
-          ></div>
-          <p class="text-sm font-medium text-[var(--text-secondary)]">After</p>
+            class="text-base leading-normal font-semibold text-[var(--text-primary)]"
+          >
+            {{ range .Params.zusatzoptionen }}
+            <p>{{ . }}</p>
+            {{ end }}
+          </div>
         </div>
       </div>
       {{ end }}
-      <div class="flex justify-center">
-        <a
-          href="{{ .Site.Params.booking_url }}"
-          target="_blank"
-          class="hover:bg-opacity-90 flex h-12 max-w-[480px] min-w-[180px] transform cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--primary-color)] px-8 text-base leading-normal font-bold tracking-[0.015em] text-[var(--text-on-primary)] shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-xl dark:shadow-none"
-        >
-          <span class="truncate">{{ .Site.Params.booking_label }}</span>
-        </a>
+    </div>
+    {{ end }}
+    <div
+      class="prose dark:prose-invert mb-8 max-w-none text-center text-base leading-relaxed font-normal text-[var(--text-secondary)] md:text-lg"
+    >
+      {{ .Content }}
+    </div>
+
+    {{ if and .Params.before_image .Params.after_image }}
+    <h2
+      class="mb-6 text-center text-2xl leading-tight font-bold tracking-tight text-[var(--text-primary)] sm:text-3xl"
+    >
+      Before & After Gallery
+    </h2>
+    <div class="mb-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div class="flex flex-col items-center gap-2">
+        <div
+          class="aspect-[4/3] w-full rounded-xl bg-cover bg-center bg-no-repeat shadow-sm dark:shadow-none"
+          style='background-image: url("{{ .Params.before_image | relURL }}");'
+        ></div>
+        <p class="text-sm font-medium text-[var(--text-secondary)]">Before</p>
       </div>
+      <div class="flex flex-col items-center gap-2">
+        <div
+          class="aspect-[4/3] w-full rounded-xl bg-cover bg-center bg-no-repeat shadow-sm dark:shadow-none"
+          style='background-image: url("{{ .Params.after_image | relURL }}");'
+        ></div>
+        <p class="text-sm font-medium text-[var(--text-secondary)]">After</p>
+      </div>
+    </div>
+    {{ end }}
+    <div class="flex justify-center">
+      <a
+        href="{{ .Site.Params.booking_url }}"
+        target="_blank"
+        class="hover:bg-opacity-90 flex h-12 max-w-[480px] min-w-[180px] transform cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--primary-color)] px-8 text-base leading-normal font-bold tracking-[0.015em] text-[var(--text-on-primary)] shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-xl dark:shadow-none"
+      >
+        <span class="truncate">{{ .Site.Params.booking_label }}</span>
+      </a>
     </div>
   </div>
 </section>

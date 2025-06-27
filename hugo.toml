@@ -33,10 +33,10 @@ name = "Über Uns"
 pageRef = "/about"
 weight = 30
 
-[[menu.main]]
-name = "Galerie"
-pageRef = "/gallery"
-weight = 40
+# [[menu.main]]
+# name = "Galerie"
+# pageRef = "/gallery"
+# weight = 40
 
 [[menu.main]]
 name = "Blog"
