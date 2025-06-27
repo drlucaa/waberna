@@ -7,7 +7,7 @@ price = "57.50 CHF"
 time_estimate = "45 Minuten"
 image = "https://placehold.co/600x400/369137/ffffff?text=Damen+Waschen+Schneiden+Ohne+Föhnen"
 service_categories = ["Damen"]
-rabatte = ["Studenten (20–24 Jahre): 15 %", "Teenager (16–19 Jahre): 20 %"]
+rabatte = ["Studenten (20–24): 15 %", "Teenager (16–19): 20 %"]
 zusatzoptionen = []
 +++
 

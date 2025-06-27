@@ -7,7 +7,7 @@ price = "74.50 CHF"
 time_estimate = "75 Minuten"
 image = "https://placehold.co/600x400/369137/ffffff?text=Damen+Nass+Schneiden+Und+Föhnen"
 service_categories = ["Damen"]
-rabatte = ["Studenten (20–24 Jahre): 15 %", "Teenager (16–19 Jahre): 20 %"]
+rabatte = ["Studenten (20–24): 15 %", "Teenager (16–19): 20 %"]
 zusatzoptionen = ["Styling mit Heizgerät: +20 CHF"]
 +++
 
