@@ -5,9 +5,7 @@ draft = false
 description = ""
 price = ""
 time_estimate = ""
-image = "https://placehold.co/600x400/4d2224/ffffff?text={{ replace .File.ContentBaseName "-" "+" | title }}"
-before_image = "https://placehold.co/600x400/4d2224/ffffff?text=Before"
-after_image = "https://placehold.co/600x400/4d2224/ffffff?text=After"
+image = "https://placehold.co/600x400/369137/ffffff?text={{ replace .File.ContentBaseName "-" "+" | title }}"
 service_categories = []
 rabatte = []
 zusatzoptionen = []

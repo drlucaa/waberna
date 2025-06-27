@@ -5,9 +5,7 @@ draft = false
 description = "Nach ausführlicher Beratung und Haarwäsche werden Wickler eingesetzt. Der Endpreis richtet sich nach Haarlänge, Wicklermenge und Zeitaufwand."
 price = "61 – 105 CHF"
 time_estimate = "120 Minuten"
-image = "https://placehold.co/600x400/4d2224/ffffff?text=Dauerwelle"
-before_image = "https://placehold.co/600x400/4d2224/ffffff?text=Before"
-after_image = "https://placehold.co/600x400/4d2224/ffffff?text=After"
+image = "https://placehold.co/600x400/369137/ffffff?text=Dauerwelle"
 service_categories = ["Umstyling"]
 rabatte = []
 zusatzoptionen = []

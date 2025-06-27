@@ -43,6 +43,7 @@
           </p>
         </div>
       </div>
+
       <div
         class="flex items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
       >
@@ -63,15 +64,10 @@
           </p>
         </div>
       </div>
-    </div>
 
-    {{ if or .Params.rabatte .Params.zusatzoptionen }}
-    <div
-      class="mb-8 grid grid-cols-1 gap-6 {{ if not (and .Params.rabatte .Params.zusatzoptionen) }}place-items-center{{ else }}sm:grid-cols-2{{ end }}"
-    >
-      {{ if .Params.rabatte }}
+      {{ if and .Params.rabatte .Params.zusatzoptionen }}
       <div
-        class="flex w-full items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
+        class="flex items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
       >
         <span
           class="material-icons-outlined text-2xl text-[var(--primary-color)]"
@@ -92,9 +88,8 @@
           </div>
         </div>
       </div>
-      {{ end }} {{ if .Params.zusatzoptionen }}
       <div
-        class="flex w-full items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
+        class="flex items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
       >
         <span
           class="material-icons-outlined text-2xl text-[var(--primary-color)]"
@@ -115,13 +110,53 @@
           </div>
         </div>
       </div>
+      {{ else if or .Params.rabatte .Params.zusatzoptionen }}
+      <div class="flex justify-center sm:col-span-2">
+        <div
+          class="flex w-full max-w-md items-center gap-3 rounded-lg bg-[var(--background-dark)] p-4"
+        >
+          {{ if .Params.rabatte }}
+          <span
+            class="material-icons-outlined text-2xl text-[var(--primary-color)]"
+            >discount</span
+          >
+          <div>
+            <p
+              class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
+            >
+              Rabatte
+            </p>
+            <div
+              class="text-base leading-normal font-semibold text-[var(--text-primary)]"
+            >
+              {{ range .Params.rabatte }}
+              <p>{{ . }}</p>
+              {{ end }}
+            </div>
+          </div>
+          {{ else }}
+          <span
+            class="material-icons-outlined text-2xl text-[var(--primary-color)]"
+            >add_circle_outline</span
+          >
+          <div>
+            <p
+              class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
+            >
+              Zusatzoptionen
+            </p>
+            <div
+              class="text-base leading-normal font-semibold text-[var(--text-primary)]"
+            >
+              {{ range .Params.zusatzoptionen }}
+              <p>{{ . }}</p>
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
       {{ end }}
-    </div>
-    {{ end }}
-    <div
-      class="prose dark:prose-invert mb-8 max-w-none text-center text-base leading-relaxed font-normal text-[var(--text-secondary)] md:text-lg"
-    >
-      {{ .Content }}
     </div>
 
     {{ if and .Params.before_image .Params.after_image }}
