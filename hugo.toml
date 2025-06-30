@@ -23,10 +23,10 @@ name = "Home"
 pageRef = "/"
 weight = 10
 
-[[menu.main]]
-name = "Dienstleistungen"
-pageRef = "/services"
-weight = 20
+# [[menu.main]]
+# name = "Dienstleistungen"
+# pageRef = "/services"
+# weight = 20
 
 [[menu.main]]
 name = "Über Uns"
