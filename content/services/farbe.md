@@ -4,7 +4,7 @@ date = 2025-06-26
 draft = false
 description = "Nach einer Farbberatung wird das Haar gefärbt und findet kein spontanes, häufiges Ausbleichen statt. Eine weitere Dienstleistung (z. B. Waschen, Schneiden, Föhnen) ist möglich."
 price = "65 – 80 CHF"
-time_estimate = "60 Minuten"
+time_estimate = "20 Minuten + Einwirkzeit"
 image = "https://placehold.co/600x400/369137/ffffff?text=Farbe"
 service_categories = ["Farbe"]
 rabatte = []

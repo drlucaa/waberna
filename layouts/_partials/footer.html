@@ -30,6 +30,14 @@
       {{ end }}
     </div>
     <p class="text-sm leading-normal font-normal text-[var(--text-secondary)]">
+      {{ .Site.Params.phone}}
+    </p>
+    <p class="text-sm leading-normal font-normal text-[var(--text-secondary)]">
+      {{ .Site.Params.address}}
+    </p>
+    <p
+      class="mt-6 text-sm leading-normal font-normal text-[var(--text-secondary)]"
+    >
       © {{ now.Year }} {{ .Site.Title }}
     </p>
   </div>
