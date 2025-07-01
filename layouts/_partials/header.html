@@ -2,11 +2,26 @@
   class="relative sticky top-0 z-50 flex items-center justify-between bg-[var(--background-light)] px-4 py-4 shadow-sm lg:px-10"
 >
   <div class="flex-1">
-    <a
-      class="site-title text-4xl font-bold text-[var(--primary-color)]"
-      href="{{ .Site.BaseURL }}"
-      >{{ .Site.Params.logo }}</a
-    >
+    <a class="flex items-center" href="{{ .Site.BaseURL }}">
+      {{ with .Site.Params.logo }} {{ $logoSVG := resources.Get . }} {{ if
+      $logoSVG }}
+      <span
+        class="inline-flex h-12 w-12 items-center justify-center fill-current text-[var(--primary-color)]"
+      >
+        {{/* Increased logo size to h-12 w-12 */}} {{ $logoSVG.Content |
+        safeHTML }}
+      </span>
+      <span class="sr-only">{{ $.Site.Title }}</span>
+      {{ else }}
+      <span class="site-title text-4xl font-bold text-[var(--primary-color)]"
+        >{{ $.Site.Params.logo }}</span
+      >
+      {{ end }} {{ else }}
+      <span class="site-title text-4xl font-bold text-[var(--primary-color)]"
+        >{{ .Site.Params.logo }}</span
+      >
+      {{ end }}
+    </a>
   </div>
 
   <nav class="hidden items-center gap-6 md:flex">

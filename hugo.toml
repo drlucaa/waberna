@@ -5,7 +5,7 @@ title = 'Waberna'
 ignoreLogs = ["warning-goldmark-raw-html"]
 
 [params]
-logo = "WB"
+logo = "images/logo.svg"
 description = "Kreativer und unabhängiger Coiffeursalon im Herzen von Wabern."
 booking_url = "https://salonkee.ch/salon/coiffeur-waberna/widget/service?lang=de"
 booking_label = "Jetzt Buchen"
