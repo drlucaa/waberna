@@ -6,7 +6,7 @@
       {{ with .Site.Params.logo }} {{ $logoSVG := resources.Get . }} {{ if
       $logoSVG }}
       <span
-        class="inline-flex h-12 w-12 items-center justify-center fill-current text-[var(--primary-color)]"
+        class="inline-flex h-11 w-11 items-center justify-center fill-current text-[var(--primary-color)]"
       >
         {{/* Increased logo size to h-12 w-12 */}} {{ $logoSVG.Content |
         safeHTML }}
