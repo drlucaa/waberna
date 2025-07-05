@@ -1,6 +1,7 @@
-baseURL = 'https://waberna.ch/'
-languageCode = 'de-ch'
-title = 'Waberna'
+baseURL = "https://waberna.ch/"
+languageCode = "de-ch"
+title = "Waberna "
+description = "Coiffeur Waberna – Ihr Coiffeur in Wabern. Ehemals Coiffeur Tscharner."
 
 ignoreLogs = ["warning-goldmark-raw-html"]
 
