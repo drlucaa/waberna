@@ -1,19 +1,19 @@
 baseURL = "https://waberna.ch/"
 languageCode = "de-ch"
 title = "Waberna "
-description = "Coiffeur Waberna – Ihr Coiffeur in Wabern. Ehemals Coiffeur Tscharner."
 
 ignoreLogs = ["warning-goldmark-raw-html"]
 
 [params]
 logo = "images/logo.svg"
-description = "Kreativer und unabhängiger Coiffeursalon im Herzen von Wabern."
+description = "Coiffeur Waberna – Ihr Coiffeur in Wabern. Ehemals Coiffeur Tscharner."
 booking_url = "https://salonkee.ch/salon/coiffeur-waberna/widget/service?lang=de"
 booking_label = "Jetzt Buchen"
 address = "Dorfstrasse 2, 3084 Wabern"
 phone = "031 961 29 86"
 hero_background_image = "images/hero.jpg"
 placeholder_image = "images/placeholder.jpg"
+author = "Luca Fondo"
 
 [taxonomies]
 category = "categories"

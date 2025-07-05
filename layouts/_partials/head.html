@@ -2,25 +2,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>
-  {{ block "title" . }}
-  {{- .Site.Title }} - {{ .Title -}}
-  {{ end }}
+    {{ block "title" . }} {{- .Site.Title }} - {{ .Title -}} {{ end }}
   </title>
-  {{- if .Description }}
-  <meta name="description" content="{{ .Description }}" />
-  {{ end -}}
-  {{- if .Keywords }}
-  <meta name="keywords" content="{{ delimit .Keywords " ," }}" />
-  {{ end -}}
-  {{- if .Params.Author }}
-  <meta name="author" content="{{ .Params.Author}}" />
-  {{ end -}}
+  {{- if .Site.Params.Description }}
+  <meta name="description" content="{{ .Site.Params.Description }}" />
+  {{ end -}} {{- if .Site.Params.Author }}
+  <meta name="author" content="{{ .Site.Params.Author}}" />
+  {{ end -}} {{/* Google Fonts for Material Icons */}}
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://use.typekit.net/buw5fnu.css" />
 
-  {{/* Google Fonts for Material Icons */}}
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
-  <link rel="stylesheet" href="https://use.typekit.net/buw5fnu.css">
-
-  {{ hugo.Generator }}
-  {{ partialCached "css.html" . }}
-  {{ partialCached "js.html" . }}
+  {{ hugo.Generator }} {{ partialCached "css.html" . }} {{ partialCached
+  "js.html" . }}
 </head>
