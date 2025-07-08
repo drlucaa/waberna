@@ -4,19 +4,16 @@
       class="block overflow-hidden rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl"
       href="{{ .Permalink }}"
     >
-      {{ if .Params.image }}
+      <!-- prettier-ignore -->
+      {{ with resources.Get .Params.image }}
+      {{ with .Resize "600x webp" }}
+      <!-- prettier-ignore -->
       <img
         alt="{{ .Title }}"
         class="h-48 w-full transform object-cover transition-transform duration-300 group-hover:scale-105"
-        src="{{ .Params.image | relURL }}"
+        src="{{ .RelPermalink }}"
       />
-      {{ else }}
-      <img
-        alt="{{ .Title }}"
-        class="h-48 w-full transform object-cover transition-transform duration-300 group-hover:scale-105"
-        src="{{ .Site.Params.placeholder_image | relURL }}"
-      />
-      {{ end }}
+      {{ end }} {{ end }}
     </a>
   </div>
   <div class="space-y-3 md:col-span-2">

@@ -25,15 +25,18 @@
     <div
       class="rounded-2xl bg-[var(--background-light)] p-6 shadow-sm sm:p-8 dark:shadow-none"
     >
-      {{ with .Params.image }}
+      <!-- prettier-ignore -->
+      {{ with resources.Get .Params.image }}
+      {{ with .Resize "2500x webp" }}
+      <!-- prettier-ignore -->
       <div class="mb-8">
         <img
-          src="{{ . | relURL }}"
+          src="{{ .Permalink }}"
           alt="{{ $.Title }}"
           class="h-auto w-full rounded-lg shadow-md"
         />
       </div>
-      {{ end }}
+      {{ end }} {{ end }}
       <div
         class="prose dark:prose-invert mb-8 max-w-none text-base leading-relaxed font-normal text-[var(--text-secondary)] md:text-lg"
       >

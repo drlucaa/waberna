@@ -167,17 +167,27 @@
     </h2>
     <div class="mb-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
       <div class="flex flex-col items-center gap-2">
+        <!-- prettier-ignore -->
+        {{ with resources.Get .Params.before_image }}
+        {{ with .Resize "1500x webp" }}
+        <!-- prettier-ignore -->
         <div
           class="aspect-[4/3] w-full rounded-xl bg-cover bg-center bg-no-repeat shadow-sm dark:shadow-none"
-          style='background-image: url("{{ .Params.before_image | relURL }}");'
+          style='background-image: url("{{ .Permalink }}");'
         ></div>
+        {{ end }} {{ end }}
         <p class="text-sm font-medium text-[var(--text-secondary)]">Before</p>
       </div>
       <div class="flex flex-col items-center gap-2">
+        <!-- prettier-ignore -->
+        {{ with resources.Get .Params.after_image }}
+        {{ with .Resize "1500x webp" }}
+        <!-- prettier-ignore -->
         <div
           class="aspect-[4/3] w-full rounded-xl bg-cover bg-center bg-no-repeat shadow-sm dark:shadow-none"
-          style='background-image: url("{{ .Params.after_image | relURL }}");'
+          style='background-image: url("{{ .Permalink }}");'
         ></div>
+        {{ end }} {{ end }}
         <p class="text-sm font-medium text-[var(--text-secondary)]">After</p>
       </div>
     </div>

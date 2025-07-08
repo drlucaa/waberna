@@ -4,11 +4,16 @@
   <div
     class="relative mx-auto mb-4 h-36 w-36 flex-shrink-0 overflow-hidden rounded-full border-4 border-[var(--background-dark)] shadow-md"
   >
+    <!-- prettier-ignore -->
+    {{ with resources.Get .image }}
+    {{ with .Resize "600x webp" }}
+    <!-- prettier-ignore -->
     <img
-      alt="{{ .name }}"
+      alt="{{ $.name }}"
       class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-      src="{{ .image | relURL }}"
+      src="{{ .Permalink }}"
     />
+    {{ end }} {{ end }}
   </div>
   <div class="flex flex-grow flex-col">
     <p class="text-lg leading-normal font-semibold text-[var(--text-primary)]">

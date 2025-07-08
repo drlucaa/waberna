@@ -4,7 +4,7 @@
   style='
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%),
-      url("{{ .Site.Params.hero_background_image | relURL }}");
+      url("{{ with resources.Get .Site.Params.hero_background_image }}{{ with .Resize "2500x webp" }}{{ .RelPermalink }}{{ end }}{{ end }}");
   '
 >
   <div class="container mx-auto px-6 text-center">
@@ -23,11 +23,16 @@
   <div class="mx-auto columns-2 gap-4 md:columns-3 lg:columns-4">
     {{ range .Site.Data.gallery }}
     <div class="group mb-4 break-inside-avoid overflow-hidden rounded-lg">
+      <!-- prettier-ignore -->
+      {{ with resources.Get .image }}
+      {{ with .Resize "600x webp" }}
+      <!-- prettier-ignore -->
       <img
         class="h-auto w-full max-w-full transform transition-transform duration-300 group-hover:scale-105"
-        src="{{ .src | relURL }}"
-        alt="{{ .alt }}"
+        src="{{ .Permalink }}"
+        alt="{{ $.alt }}"
       />
+      {{ end }} {{ end }}
     </div>
     {{ end }}
   </div>
