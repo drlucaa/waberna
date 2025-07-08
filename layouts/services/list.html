@@ -40,10 +40,15 @@
       >
         <div class="overflow-hidden">
           <a href="{{ .Permalink }}">
+            <!-- prettier-ignore -->
+            {{ with resources.Get .Params.image }}
+            {{ with .Resize "400x webp" }}
+            <!-- prettier-ignore -->
             <div
-              class="aspect-[4/3] w-full transform bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105"
-              style='background-image: url("{{ .Params.image | relURL }}");'
-            ></div>
+                    class="aspect-[4/3] w-full transform bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105"
+                    style='background-image: url("{{ .RelPermalink }}");'
+                  ></div>
+            {{ end }} {{ end }}
           </a>
         </div>
         <div class="flex flex-grow flex-col p-5">
