@@ -4,7 +4,13 @@
   "version": "1.2.1-dev",
   "license": "MIT",
   "author": "Odhy Pradhana (odhyp.com)",
-  "keywords": ["hugo", "tailwindcss", "tailwindcss-v4", "netlify", "vercel"],
+  "keywords": [
+    "hugo",
+    "tailwindcss",
+    "tailwindcss-v4",
+    "netlify",
+    "vercel"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/odhyp/hugo-tailwindcss-starter.git"
@@ -14,7 +20,7 @@
   },
   "homepage": "https://github.com/odhyp/hugo-tailwindcss-starter#readme",
   "scripts": {
-    "dev": "hugo server --buildDrafts --buildFuture --renderToMemory --verbose",
+    "dev": "hugo server --buildDrafts --buildFuture --renderToMemory",
     "build": "hugo --gc --minify",
     "watch": "hugo server --disableFastRender --navigateToChanged"
   },
@@ -23,5 +29,8 @@
     "prettier": "^3.6.0",
     "prettier-plugin-tailwindcss": "^0.6.13",
     "tailwindcss": "^4.1.10"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16"
   }
 }

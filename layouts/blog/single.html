@@ -14,6 +14,13 @@
       >
         {{ .Date.Format "Veröffentlicht am 2. Januar 2006" }}
       </p>
+      {{ with .Params.description }}
+      <p
+        class="mt-2 text-base font-normal text-[var(--text-secondary)] sm:text-lg"
+      >
+        {{ . | safeHTML }}
+      </p>
+      {{ end }}
     </div>
     <div
       class="rounded-2xl bg-[var(--background-light)] p-6 shadow-sm sm:p-8 dark:shadow-none"
