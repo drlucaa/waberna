@@ -5,7 +5,7 @@ draft = false
 description = "Wir verwöhnen Sie mit einer entspannenden Kopfmassage und pflegender Pflege. Danach wird das Haar handtuchtrocken übergeben."
 price = "20 CHF"
 time_estimate = "10 Minuten"
-image = "https://placehold.co/600x400/369137/ffffff?text=Waschen+Ohne+Föhnen"
+image = "images/services/waschen.jpg"
 service_categories = []
 rabatte = []
 zusatzoptionen = []

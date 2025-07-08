@@ -5,7 +5,7 @@ draft = false
 description = "Nach einer ausführlichen Beratung und dem Waschen mit Kopfmassage wird das Haar vorbereitet, geknetet. Danach werden die Wickler entfernt und das Haar frisiert."
 price = "43 CHF"
 time_estimate = "30 Minuten"
-image = "https://placehold.co/600x400/369137/ffffff?text=Waschen+Und+Legen"
+image = "images/services/damen_legen.jpg"
 service_categories = []
 rabatte = []
 zusatzoptionen = []

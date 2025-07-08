@@ -33,7 +33,7 @@
       {{ end }}
     </div>
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
-      {{ range .Pages }}
+      {{ range shuffle .Pages }}
       <div
         class="service-card group flex flex-col gap-4 overflow-hidden rounded-xl bg-[var(--background-light)] shadow-sm transition-shadow duration-300 dark:shadow-none"
         data-category="{{ range .Params.service_categories }}{{ . | lower }} {{ end }}"
