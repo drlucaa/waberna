@@ -35,6 +35,29 @@
     <p class="text-sm leading-normal font-normal text-[var(--text-secondary)]">
       {{ .Site.Params.address}}
     </p>
+    {{ with .Site.Params.opening_hours }} {{ if .enabled }}
+    <div class="mt-6">
+      <h3
+        class="text-sm leading-normal font-medium text-[var(--text-secondary)]"
+      >
+        {{ .title }}
+      </h3>
+      <ul
+        class="text-sm leading-normal font-normal text-[var(--text-secondary)]"
+      >
+        <li>Montag: {{ .monday }}</li>
+        <li>Dienstag: {{ .tuesday }}</li>
+        <li>Mittwoch: {{ .wednesday }}</li>
+        <li>Donnerstag: {{ .thursday }}</li>
+        <li>Freitag: {{ .friday }}</li>
+        <li>Samstag: {{ .saturday }}</li>
+        <li>Sonntag: {{ .sunday }}</li>
+      </ul>
+    </div>
+    {{ end }} {{ end }}
+    <p
+      class="mt-6 text-sm leading-normal font-normal text-[var(--text-secondary)]"
+    ></p>
     <p
       class="mt-6 text-sm leading-normal font-normal text-[var(--text-secondary)]"
     >
