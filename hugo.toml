@@ -15,6 +15,17 @@ hero_background_image = "images/hero.jpg"
 placeholder_image = "images/placeholder.jpg"
 author = "Luca Fondo"
 
+[params.opening_hours]
+enabled = true
+title = "Öffnungszeiten"
+monday = "Geschlossen"
+tuesday = "08:00 - 18:30"
+wednesday = "08:00 - 18:30"
+thursday = "08:00 - 18:00"
+friday = "08:00 - 18:30"
+saturday = "08:00 - 14:00"
+sunday = "Geschlossen"
+
 [taxonomies]
 category = "categories"
 service_category = "service_categories"
