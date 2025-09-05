@@ -1,9 +1,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>
-    {{ block "title" . }} {{- .Site.Title }} {{ end }}
-  </title>
+  <title>{{ block "title" . }} {{- .Site.Title }} {{ end }}</title>
   {{- if .Site.Params.Description }}
   <meta name="description" content="{{ .Site.Params.Description }}" />
   {{ end -}} {{- if .Site.Params.Author }}
@@ -14,7 +12,8 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="https://use.typekit.net/buw5fnu.css" />
-
-  {{ hugo.Generator }} {{ partialCached "css.html" . }} {{ partialCached
-  "js.html" . }}
+  {{ with .Site.Params.logo }} {{ with resources.Get . }}
+  <link rel="icon" href="{{ .RelPermalink }}" type="image/svg+xml" />
+  {{ end }} {{ end }} {{ hugo.Generator }} {{ partialCached "css.html" . }} {{
+  partialCached "js.html" . }}
 </head>
