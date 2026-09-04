@@ -14,6 +14,6 @@
   <link rel="stylesheet" href="https://use.typekit.net/buw5fnu.css" />
   {{ with .Site.Params.logo }} {{ with resources.Get . }}
   <link rel="icon" href="{{ .RelPermalink }}" type="image/svg+xml" />
-  {{ end }} {{ end }} {{ hugo.Generator }} {{ partialCached "css.html" . }} {{
+  {{ end }} {{ end }} {{ hugo.Generator }} {{ partial "css.html" . }} {{
   partialCached "js.html" . }}
 </head>
