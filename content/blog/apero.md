@@ -9,12 +9,17 @@ categories = []
 
 Ein besonderer Moment steht bevor – und wir möchten ihn gerne mit euch feiern!
 
-Nach vielen erfolgreichen Jahren unter dem Namen **Coiffeur Tscharner** schlagen wir gemeinsam ein neues Kapitel auf und heißen euch herzlich willkommen bei **Coiffeur Waberna**.
+Nach vielen erfolgreichen Jahren unter dem Namen **Coiffeur Tscharner** schlagen
+wir gemeinsam ein neues Kapitel auf und heißen euch herzlich willkommen bei
+**Coiffeur Waberna**.
 
-**Was bleibt**: Das gesamte Team, das ihr kennt und schätzt – mit der gleichen Leidenschaft, dem gewohnten Service und dem vertrauten Gespür für euren Stil.\
-**Was sich ändert**: Die Inhaberschaft – mit neuem Namen und frischer Energie gehen wir in die Zukunft.
+**Was bleibt**: Das gesamte Team, das ihr kennt und schätzt – mit der gleichen
+Leidenschaft, dem gewohnten Service und dem vertrauten Gespür für euren Stil.\
+**Was sich ändert**: Die Inhaberschaft – mit neuem Namen und frischer Energie
+gehen wir in die Zukunft.
 
-Diesen Übergang möchten wir mit einem gemütlichen **Verabschiedungs- und Eröffnungsapéro** feiern – und laden euch herzlich dazu ein!
+Diesen Übergang möchten wir mit einem gemütlichen **Verabschiedungs- und
+Eröffnungsapéro** feiern – und laden euch herzlich dazu ein!
 
 Kommt vorbei, stoßt mit uns an und feiert diesen besonderen Moment mit uns!\
 **Keine Anmeldung nötig – wir freuen uns auf euren Besuch.**
